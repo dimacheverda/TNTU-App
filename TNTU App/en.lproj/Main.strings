@@ -1,0 +1,21 @@
+
+/* Class = "IBUITableViewController"; title = "Schedule"; ObjectID = "6pX-jh-LKU"; */
+"6pX-jh-LKU.title" = "Schedule";
+
+/* Class = "IBUIButton"; normalTitle = "Article UIView"; ObjectID = "EdC-HO-edD"; */
+"EdC-HO-edD.normalTitle" = "Article UIView";
+
+/* Class = "IBUITabBarItem"; title = "Schedule"; ObjectID = "L73-jB-vG1"; */
+"L73-jB-vG1.title" = "Schedule";
+
+/* Class = "IBUINavigationItem"; title = "News"; ObjectID = "NG8-zk-oaW"; */
+"NG8-zk-oaW.title" = "News";
+
+/* Class = "IBUINavigationItem"; title = "Schedule"; ObjectID = "fOB-sY-nU1"; */
+"fOB-sY-nU1.title" = "Schedule";
+
+/* Class = "IBUITabBarItem"; title = "News"; ObjectID = "qJf-Yk-vwR"; */
+"qJf-Yk-vwR.title" = "News";
+
+/* Class = "IBUITableViewController"; title = "News"; ObjectID = "ry8-vE-8Jm"; */
+"ry8-vE-8Jm.title" = "News";

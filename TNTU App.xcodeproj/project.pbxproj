@@ -14,13 +14,28 @@
 		32810D5317E7503600FF45C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D5217E7503600FF45C8 /* main.m */; };
 		32810D5717E7503600FF45C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D5617E7503600FF45C8 /* AppDelegate.m */; };
 		32810D5A17E7503600FF45C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32810D5817E7503600FF45C8 /* Main.storyboard */; };
-		32810D5D17E7503600FF45C8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D5C17E7503600FF45C8 /* ViewController.m */; };
 		32810D5F17E7503600FF45C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32810D5E17E7503600FF45C8 /* Images.xcassets */; };
 		32810D6617E7503600FF45C8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32810D6517E7503600FF45C8 /* XCTest.framework */; };
 		32810D6717E7503600FF45C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32810D4617E7503600FF45C8 /* Foundation.framework */; };
 		32810D6817E7503600FF45C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32810D4A17E7503600FF45C8 /* UIKit.framework */; };
 		32810D7017E7503600FF45C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 32810D6E17E7503600FF45C8 /* InfoPlist.strings */; };
 		32810D7217E7503600FF45C8 /* TNTU_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D7117E7503600FF45C8 /* TNTU_AppTests.m */; };
+		32810D7D17E7521C00FF45C8 /* NewsMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D7C17E7521C00FF45C8 /* NewsMainTableViewController.m */; };
+		32810D7E17E7521C00FF45C8 /* NewsMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D7C17E7521C00FF45C8 /* NewsMainTableViewController.m */; };
+		32810D8117E7525200FF45C8 /* ScheduleMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D8017E7525200FF45C8 /* ScheduleMainTableViewController.m */; };
+		32810D8217E7525200FF45C8 /* ScheduleMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D8017E7525200FF45C8 /* ScheduleMainTableViewController.m */; };
+		32810D8E17E755B400FF45C8 /* 34@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32810D8A17E755B400FF45C8 /* 34@2x.png */; };
+		32810D8F17E755B400FF45C8 /* 34@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32810D8A17E755B400FF45C8 /* 34@2x.png */; };
+		32810D9017E755B400FF45C8 /* 41@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32810D8B17E755B400FF45C8 /* 41@2x.png */; };
+		32810D9117E755B400FF45C8 /* 41@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32810D8B17E755B400FF45C8 /* 41@2x.png */; };
+		32810D9217E755B400FF45C8 /* 34.png in Resources */ = {isa = PBXBuildFile; fileRef = 32810D8C17E755B400FF45C8 /* 34.png */; };
+		32810D9317E755B400FF45C8 /* 34.png in Resources */ = {isa = PBXBuildFile; fileRef = 32810D8C17E755B400FF45C8 /* 34.png */; };
+		32810D9417E755B400FF45C8 /* 41.png in Resources */ = {isa = PBXBuildFile; fileRef = 32810D8D17E755B400FF45C8 /* 41.png */; };
+		32810D9517E755B400FF45C8 /* 41.png in Resources */ = {isa = PBXBuildFile; fileRef = 32810D8D17E755B400FF45C8 /* 41.png */; };
+		32810D9817E75FBD00FF45C8 /* NewsSecondaryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D9717E75FBD00FF45C8 /* NewsSecondaryTableViewController.m */; };
+		32810D9917E75FBD00FF45C8 /* NewsSecondaryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D9717E75FBD00FF45C8 /* NewsSecondaryTableViewController.m */; };
+		32810D9C17E78A3B00FF45C8 /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D9B17E78A3B00FF45C8 /* ArticleViewController.m */; };
+		32810D9D17E78A3B00FF45C8 /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D9B17E78A3B00FF45C8 /* ArticleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +60,24 @@
 		32810D5517E7503600FF45C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		32810D5617E7503600FF45C8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		32810D5917E7503600FF45C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		32810D5B17E7503600FF45C8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		32810D5C17E7503600FF45C8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		32810D5E17E7503600FF45C8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		32810D6417E7503600FF45C8 /* TNTU AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TNTU AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32810D6517E7503600FF45C8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		32810D6D17E7503600FF45C8 /* TNTU AppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TNTU AppTests-Info.plist"; sourceTree = "<group>"; };
 		32810D6F17E7503600FF45C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		32810D7117E7503600FF45C8 /* TNTU_AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNTU_AppTests.m; sourceTree = "<group>"; };
+		32810D7B17E7521C00FF45C8 /* NewsMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsMainTableViewController.h; sourceTree = "<group>"; };
+		32810D7C17E7521C00FF45C8 /* NewsMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsMainTableViewController.m; sourceTree = "<group>"; };
+		32810D7F17E7525200FF45C8 /* ScheduleMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleMainTableViewController.h; sourceTree = "<group>"; };
+		32810D8017E7525200FF45C8 /* ScheduleMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleMainTableViewController.m; sourceTree = "<group>"; };
+		32810D8A17E755B400FF45C8 /* 34@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "34@2x.png"; sourceTree = "<group>"; };
+		32810D8B17E755B400FF45C8 /* 41@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "41@2x.png"; sourceTree = "<group>"; };
+		32810D8C17E755B400FF45C8 /* 34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 34.png; sourceTree = "<group>"; };
+		32810D8D17E755B400FF45C8 /* 41.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 41.png; sourceTree = "<group>"; };
+		32810D9617E75FBD00FF45C8 /* NewsSecondaryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsSecondaryTableViewController.h; sourceTree = "<group>"; };
+		32810D9717E75FBD00FF45C8 /* NewsSecondaryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsSecondaryTableViewController.m; sourceTree = "<group>"; };
+		32810D9A17E78A3B00FF45C8 /* ArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleViewController.h; sourceTree = "<group>"; };
+		32810D9B17E78A3B00FF45C8 /* ArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,9 +140,16 @@
 				32810D5517E7503600FF45C8 /* AppDelegate.h */,
 				32810D5617E7503600FF45C8 /* AppDelegate.m */,
 				32810D5817E7503600FF45C8 /* Main.storyboard */,
-				32810D5B17E7503600FF45C8 /* ViewController.h */,
-				32810D5C17E7503600FF45C8 /* ViewController.m */,
+				32810D7B17E7521C00FF45C8 /* NewsMainTableViewController.h */,
+				32810D7C17E7521C00FF45C8 /* NewsMainTableViewController.m */,
+				32810D9617E75FBD00FF45C8 /* NewsSecondaryTableViewController.h */,
+				32810D9717E75FBD00FF45C8 /* NewsSecondaryTableViewController.m */,
+				32810D9A17E78A3B00FF45C8 /* ArticleViewController.h */,
+				32810D9B17E78A3B00FF45C8 /* ArticleViewController.m */,
+				32810D7F17E7525200FF45C8 /* ScheduleMainTableViewController.h */,
+				32810D8017E7525200FF45C8 /* ScheduleMainTableViewController.m */,
 				32810D5E17E7503600FF45C8 /* Images.xcassets */,
+				32810D8317E7555E00FF45C8 /* Artwork */,
 				32810D4D17E7503600FF45C8 /* Supporting Files */,
 			);
 			path = "TNTU App";
@@ -150,6 +182,17 @@
 				32810D6E17E7503600FF45C8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		32810D8317E7555E00FF45C8 /* Artwork */ = {
+			isa = PBXGroup;
+			children = (
+				32810D8A17E755B400FF45C8 /* 34@2x.png */,
+				32810D8B17E755B400FF45C8 /* 41@2x.png */,
+				32810D8C17E755B400FF45C8 /* 34.png */,
+				32810D8D17E755B400FF45C8 /* 41.png */,
+			);
+			name = Artwork;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,7 +271,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32810D9217E755B400FF45C8 /* 34.png in Resources */,
 				32810D5F17E7503600FF45C8 /* Images.xcassets in Resources */,
+				32810D9417E755B400FF45C8 /* 41.png in Resources */,
+				32810D8E17E755B400FF45C8 /* 34@2x.png in Resources */,
+				32810D9017E755B400FF45C8 /* 41@2x.png in Resources */,
 				32810D5117E7503600FF45C8 /* InfoPlist.strings in Resources */,
 				32810D5A17E7503600FF45C8 /* Main.storyboard in Resources */,
 			);
@@ -238,7 +285,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32810D9517E755B400FF45C8 /* 41.png in Resources */,
+				32810D9317E755B400FF45C8 /* 34.png in Resources */,
+				32810D9117E755B400FF45C8 /* 41@2x.png in Resources */,
 				32810D7017E7503600FF45C8 /* InfoPlist.strings in Resources */,
+				32810D8F17E755B400FF45C8 /* 34@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,9 +300,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32810D5D17E7503600FF45C8 /* ViewController.m in Sources */,
 				32810D5717E7503600FF45C8 /* AppDelegate.m in Sources */,
+				32810D9817E75FBD00FF45C8 /* NewsSecondaryTableViewController.m in Sources */,
 				32810D5317E7503600FF45C8 /* main.m in Sources */,
+				32810D7D17E7521C00FF45C8 /* NewsMainTableViewController.m in Sources */,
+				32810D8117E7525200FF45C8 /* ScheduleMainTableViewController.m in Sources */,
+				32810D9C17E78A3B00FF45C8 /* ArticleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +313,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32810D9D17E78A3B00FF45C8 /* ArticleViewController.m in Sources */,
+				32810D8217E7525200FF45C8 /* ScheduleMainTableViewController.m in Sources */,
+				32810D9917E75FBD00FF45C8 /* NewsSecondaryTableViewController.m in Sources */,
 				32810D7217E7503600FF45C8 /* TNTU_AppTests.m in Sources */,
+				32810D7E17E7521C00FF45C8 /* NewsMainTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
