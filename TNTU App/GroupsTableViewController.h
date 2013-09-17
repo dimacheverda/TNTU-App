@@ -1,5 +1,5 @@
 //
-//  ScheduleMainTableViewController.h
+//  GroupsTableViewController.h
 //  TNTU App
 //
 //  Created by Dima on 9/16/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ScheduleMainTableViewController : UITableViewController
+@interface GroupsTableViewController : UITableViewController
 
 @end

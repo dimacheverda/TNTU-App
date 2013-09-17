@@ -22,8 +22,6 @@
 		32810D7217E7503600FF45C8 /* TNTU_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D7117E7503600FF45C8 /* TNTU_AppTests.m */; };
 		32810D7D17E7521C00FF45C8 /* NewsMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D7C17E7521C00FF45C8 /* NewsMainTableViewController.m */; };
 		32810D7E17E7521C00FF45C8 /* NewsMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D7C17E7521C00FF45C8 /* NewsMainTableViewController.m */; };
-		32810D8117E7525200FF45C8 /* ScheduleMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D8017E7525200FF45C8 /* ScheduleMainTableViewController.m */; };
-		32810D8217E7525200FF45C8 /* ScheduleMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D8017E7525200FF45C8 /* ScheduleMainTableViewController.m */; };
 		32810D8E17E755B400FF45C8 /* 34@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32810D8A17E755B400FF45C8 /* 34@2x.png */; };
 		32810D8F17E755B400FF45C8 /* 34@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32810D8A17E755B400FF45C8 /* 34@2x.png */; };
 		32810D9017E755B400FF45C8 /* 41@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32810D8B17E755B400FF45C8 /* 41@2x.png */; };
@@ -36,6 +34,8 @@
 		32810D9917E75FBD00FF45C8 /* NewsSecondaryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D9717E75FBD00FF45C8 /* NewsSecondaryTableViewController.m */; };
 		32810D9C17E78A3B00FF45C8 /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D9B17E78A3B00FF45C8 /* ArticleViewController.m */; };
 		32810D9D17E78A3B00FF45C8 /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D9B17E78A3B00FF45C8 /* ArticleViewController.m */; };
+		32810DA417E7A7F700FF45C8 /* GroupsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810DA317E7A7F700FF45C8 /* GroupsTableViewController.m */; };
+		32810DA517E7A7F700FF45C8 /* GroupsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810DA317E7A7F700FF45C8 /* GroupsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,8 +68,6 @@
 		32810D7117E7503600FF45C8 /* TNTU_AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNTU_AppTests.m; sourceTree = "<group>"; };
 		32810D7B17E7521C00FF45C8 /* NewsMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsMainTableViewController.h; sourceTree = "<group>"; };
 		32810D7C17E7521C00FF45C8 /* NewsMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsMainTableViewController.m; sourceTree = "<group>"; };
-		32810D7F17E7525200FF45C8 /* ScheduleMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleMainTableViewController.h; sourceTree = "<group>"; };
-		32810D8017E7525200FF45C8 /* ScheduleMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleMainTableViewController.m; sourceTree = "<group>"; };
 		32810D8A17E755B400FF45C8 /* 34@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "34@2x.png"; sourceTree = "<group>"; };
 		32810D8B17E755B400FF45C8 /* 41@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "41@2x.png"; sourceTree = "<group>"; };
 		32810D8C17E755B400FF45C8 /* 34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 34.png; sourceTree = "<group>"; };
@@ -78,6 +76,8 @@
 		32810D9717E75FBD00FF45C8 /* NewsSecondaryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsSecondaryTableViewController.m; sourceTree = "<group>"; };
 		32810D9A17E78A3B00FF45C8 /* ArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleViewController.h; sourceTree = "<group>"; };
 		32810D9B17E78A3B00FF45C8 /* ArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleViewController.m; sourceTree = "<group>"; };
+		32810DA217E7A7F700FF45C8 /* GroupsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupsTableViewController.h; sourceTree = "<group>"; };
+		32810DA317E7A7F700FF45C8 /* GroupsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,14 +140,8 @@
 				32810D5517E7503600FF45C8 /* AppDelegate.h */,
 				32810D5617E7503600FF45C8 /* AppDelegate.m */,
 				32810D5817E7503600FF45C8 /* Main.storyboard */,
-				32810D7B17E7521C00FF45C8 /* NewsMainTableViewController.h */,
-				32810D7C17E7521C00FF45C8 /* NewsMainTableViewController.m */,
-				32810D9617E75FBD00FF45C8 /* NewsSecondaryTableViewController.h */,
-				32810D9717E75FBD00FF45C8 /* NewsSecondaryTableViewController.m */,
-				32810D9A17E78A3B00FF45C8 /* ArticleViewController.h */,
-				32810D9B17E78A3B00FF45C8 /* ArticleViewController.m */,
-				32810D7F17E7525200FF45C8 /* ScheduleMainTableViewController.h */,
-				32810D8017E7525200FF45C8 /* ScheduleMainTableViewController.m */,
+				32810DA017E7A08C00FF45C8 /* News Tab */,
+				32810DA117E7A09700FF45C8 /* Schedule Tab */,
 				32810D5E17E7503600FF45C8 /* Images.xcassets */,
 				32810D8317E7555E00FF45C8 /* Artwork */,
 				32810D4D17E7503600FF45C8 /* Supporting Files */,
@@ -188,11 +182,33 @@
 			isa = PBXGroup;
 			children = (
 				32810D8A17E755B400FF45C8 /* 34@2x.png */,
-				32810D8B17E755B400FF45C8 /* 41@2x.png */,
 				32810D8C17E755B400FF45C8 /* 34.png */,
+				32810D8B17E755B400FF45C8 /* 41@2x.png */,
 				32810D8D17E755B400FF45C8 /* 41.png */,
 			);
 			name = Artwork;
+			sourceTree = "<group>";
+		};
+		32810DA017E7A08C00FF45C8 /* News Tab */ = {
+			isa = PBXGroup;
+			children = (
+				32810D7B17E7521C00FF45C8 /* NewsMainTableViewController.h */,
+				32810D7C17E7521C00FF45C8 /* NewsMainTableViewController.m */,
+				32810D9617E75FBD00FF45C8 /* NewsSecondaryTableViewController.h */,
+				32810D9717E75FBD00FF45C8 /* NewsSecondaryTableViewController.m */,
+				32810D9A17E78A3B00FF45C8 /* ArticleViewController.h */,
+				32810D9B17E78A3B00FF45C8 /* ArticleViewController.m */,
+			);
+			name = "News Tab";
+			sourceTree = "<group>";
+		};
+		32810DA117E7A09700FF45C8 /* Schedule Tab */ = {
+			isa = PBXGroup;
+			children = (
+				32810DA217E7A7F700FF45C8 /* GroupsTableViewController.h */,
+				32810DA317E7A7F700FF45C8 /* GroupsTableViewController.m */,
+			);
+			name = "Schedule Tab";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,7 +320,7 @@
 				32810D9817E75FBD00FF45C8 /* NewsSecondaryTableViewController.m in Sources */,
 				32810D5317E7503600FF45C8 /* main.m in Sources */,
 				32810D7D17E7521C00FF45C8 /* NewsMainTableViewController.m in Sources */,
-				32810D8117E7525200FF45C8 /* ScheduleMainTableViewController.m in Sources */,
+				32810DA417E7A7F700FF45C8 /* GroupsTableViewController.m in Sources */,
 				32810D9C17E78A3B00FF45C8 /* ArticleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,10 +330,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				32810D9D17E78A3B00FF45C8 /* ArticleViewController.m in Sources */,
-				32810D8217E7525200FF45C8 /* ScheduleMainTableViewController.m in Sources */,
 				32810D9917E75FBD00FF45C8 /* NewsSecondaryTableViewController.m in Sources */,
 				32810D7217E7503600FF45C8 /* TNTU_AppTests.m in Sources */,
 				32810D7E17E7521C00FF45C8 /* NewsMainTableViewController.m in Sources */,
+				32810DA517E7A7F700FF45C8 /* GroupsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +536,7 @@
 				32810D7717E7503600FF45C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		32810D7817E7503600FF45C8 /* Build configuration list for PBXNativeTarget "TNTU AppTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +545,7 @@
 				32810D7A17E7503600FF45C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
