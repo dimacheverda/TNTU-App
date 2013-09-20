@@ -10,6 +10,7 @@
 
 @interface ScheduleTableViewController : UITableViewController
 
-@property (strong, nonatomic) NSArray *scheduleForWeek;
+@property (strong, nonatomic) NSArray *scheduleForFirstWeek;
+@property (strong, nonatomic) NSArray *scheduleForSecondWeek;
 
 @end
