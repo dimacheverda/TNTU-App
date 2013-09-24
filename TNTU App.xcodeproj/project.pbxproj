@@ -36,8 +36,9 @@
 		32810D9D17E78A3B00FF45C8 /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D9B17E78A3B00FF45C8 /* ArticleViewController.m */; };
 		32810DA417E7A7F700FF45C8 /* GroupsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810DA317E7A7F700FF45C8 /* GroupsTableViewController.m */; };
 		32810DA517E7A7F700FF45C8 /* GroupsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810DA317E7A7F700FF45C8 /* GroupsTableViewController.m */; };
+		3298464817F1BFC8000B8837 /* ScheduleDoubleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3298464717F1BFC8000B8837 /* ScheduleDoubleCell.m */; };
 		32C1EA4517EB3468000ED75A /* ScheduleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C1EA4417EB3468000ED75A /* ScheduleTableViewController.m */; };
-		32C1EA4917EB3A81000ED75A /* ScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C1EA4817EB3A81000ED75A /* ScheduleCell.m */; };
+		32C1EA4917EB3A81000ED75A /* ScheduleSingleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C1EA4817EB3A81000ED75A /* ScheduleSingleCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,10 +81,12 @@
 		32810D9B17E78A3B00FF45C8 /* ArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleViewController.m; sourceTree = "<group>"; };
 		32810DA217E7A7F700FF45C8 /* GroupsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupsTableViewController.h; sourceTree = "<group>"; };
 		32810DA317E7A7F700FF45C8 /* GroupsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupsTableViewController.m; sourceTree = "<group>"; };
+		3298464617F1BFC8000B8837 /* ScheduleDoubleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleDoubleCell.h; sourceTree = "<group>"; };
+		3298464717F1BFC8000B8837 /* ScheduleDoubleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleDoubleCell.m; sourceTree = "<group>"; };
 		32C1EA4317EB3468000ED75A /* ScheduleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleTableViewController.h; sourceTree = "<group>"; };
 		32C1EA4417EB3468000ED75A /* ScheduleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleTableViewController.m; sourceTree = "<group>"; };
-		32C1EA4717EB3A81000ED75A /* ScheduleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleCell.h; sourceTree = "<group>"; };
-		32C1EA4817EB3A81000ED75A /* ScheduleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleCell.m; sourceTree = "<group>"; };
+		32C1EA4717EB3A81000ED75A /* ScheduleSingleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleSingleCell.h; sourceTree = "<group>"; };
+		32C1EA4817EB3A81000ED75A /* ScheduleSingleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleSingleCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,8 +218,10 @@
 				32810DA317E7A7F700FF45C8 /* GroupsTableViewController.m */,
 				32C1EA4317EB3468000ED75A /* ScheduleTableViewController.h */,
 				32C1EA4417EB3468000ED75A /* ScheduleTableViewController.m */,
-				32C1EA4717EB3A81000ED75A /* ScheduleCell.h */,
-				32C1EA4817EB3A81000ED75A /* ScheduleCell.m */,
+				32C1EA4717EB3A81000ED75A /* ScheduleSingleCell.h */,
+				32C1EA4817EB3A81000ED75A /* ScheduleSingleCell.m */,
+				3298464617F1BFC8000B8837 /* ScheduleDoubleCell.h */,
+				3298464717F1BFC8000B8837 /* ScheduleDoubleCell.m */,
 			);
 			name = "Schedule Tab";
 			sourceTree = "<group>";
@@ -332,7 +337,8 @@
 				32810D5317E7503600FF45C8 /* main.m in Sources */,
 				32810D7D17E7521C00FF45C8 /* NewsMainTableViewController.m in Sources */,
 				32810DA417E7A7F700FF45C8 /* GroupsTableViewController.m in Sources */,
-				32C1EA4917EB3A81000ED75A /* ScheduleCell.m in Sources */,
+				3298464817F1BFC8000B8837 /* ScheduleDoubleCell.m in Sources */,
+				32C1EA4917EB3A81000ED75A /* ScheduleSingleCell.m in Sources */,
 				32810D9C17E78A3B00FF45C8 /* ArticleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

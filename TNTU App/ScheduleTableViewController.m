@@ -7,7 +7,8 @@
 //
 
 #import "ScheduleTableViewController.h"
-#import "ScheduleCell.h"
+#import "ScheduleSingleCell.h"
+#import "ScheduleDoubleCell.h"
 
 @interface ScheduleTableViewController ()
 
@@ -43,15 +44,28 @@
     NSDictionary *subject4 = [NSDictionary dictionaryWithObjectsAndKeys:@"13:00", @"startTime", @"14:20", @"endTime", @"Practice", @"classType", @"Philosophy", @"subjectName", @"K8-13", @"auditoryNumber", nil];
     NSDictionary *subject5 = [NSDictionary dictionaryWithObjectsAndKeys:@"14:40", @"startTime", @"16:00", @"endTime", @"Lecture", @"classType", @"History", @"subjectName", @"K2-86", @"auditoryNumber", nil];
     
-    NSArray *day1 = [NSArray arrayWithObjects:subject1, subject3, subject4, subject5, nil];
-    NSArray *day2 = [NSArray arrayWithObjects:subject3, subject4, subject5, nil];
-    NSArray *day3 = [NSArray arrayWithObjects:subject2, subject4, nil];
-    NSArray *day4 = [NSArray arrayWithObjects:subject4, subject5, nil];
-    NSArray *day5 = [NSArray arrayWithObjects:subject2, subject3, subject4, nil];
+    NSArray *class1 = [NSArray arrayWithObjects:subject1, nil];
+    NSArray *class2 = [NSArray arrayWithObjects:subject1, subject3, nil];
+    NSArray *class3 = [NSArray arrayWithObjects:subject2, nil];
+    NSArray *class4 = [NSArray arrayWithObjects:subject2, subject5, nil];
+    NSArray *class5 = [NSArray arrayWithObjects:subject3, subject4, nil];
+    
+//    NSArray *day1 = [NSArray arrayWithObjects:subject1, subject3, subject4, subject5, nil];
+//    NSArray *day2 = [NSArray arrayWithObjects:subject3, subject4, subject5, nil];
+//    NSArray *day3 = [NSArray arrayWithObjects:subject2, subject4, nil];
+//    NSArray *day4 = [NSArray arrayWithObjects:subject4, subject5, nil];
+//    NSArray *day5 = [NSArray arrayWithObjects:subject2, subject3, subject4, nil];
+    
+    NSArray *day1 = [NSArray arrayWithObjects:class1, class5, nil];
+    NSArray *day2 = [NSArray arrayWithObjects:class2, class3, class4, class5, nil];
+    NSArray *day3 = [NSArray arrayWithObjects:class1, class4, class5, nil];
+    NSArray *day4 = [NSArray arrayWithObjects:class1, class2, class3,class5, nil];
+    NSArray *day5 = [NSArray arrayWithObjects:class3, class4, class5, nil];
     
     self.scheduleForFirstWeek = [NSArray arrayWithObjects:day1, day2, day3, day4, day5, nil];
     self.scheduleForSecondWeek = [NSArray arrayWithObjects:day2, day1, day5, day3, day4, nil];
 }
+
 - (IBAction)segmentedControlValueChanged:(id)sender
 {
     [self.tableView reloadData];
@@ -61,14 +75,14 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-//    if (self.segmentedControl.selectedSegmentIndex == 0) {
-//        return [self.scheduleForFirstWeek count];
-//    } else {
-//        if (self.segmentedControl.selectedSegmentIndex == 1) {
-//            return [self.scheduleForSecondWeek count];
-//        }
-//    }
-    return 5;
+    if (self.segmentedControl.selectedSegmentIndex == 0) {
+        return [self.scheduleForFirstWeek count];
+    } else {
+        if (self.segmentedControl.selectedSegmentIndex == 1) {
+            return [self.scheduleForSecondWeek count];
+        }
+    }
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -85,23 +99,54 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    ScheduleCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    NSDictionary *subject = nil;
+    static NSString *SingleCellIdentifier = @"Single Cell";
+    static NSString *DoubleCellIdentifier = @"Double Cell";
+    
+    NSArray *class = nil;
+    UITableViewCell *cell = nil;
+    
+    // checking witch week schedule to load
     if (self.segmentedControl.selectedSegmentIndex == 0) {
-        subject = [[self.scheduleForFirstWeek objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
-    } else subject = [[self.scheduleForSecondWeek objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+        class = [[self.scheduleForFirstWeek objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+    } else class = [[self.scheduleForSecondWeek objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
     
-    cell.startTimeLabel.text = [subject objectForKey:@"startTime"];
-    cell.endTimeLabel.text = [subject objectForKey:@"endTime"];
-    cell.classTypeLabel.text = [subject objectForKey:@"classType"];
-    cell.subjectNameLabel.text = [subject objectForKey:@"subjectName"];
-    cell.auditoryNumberLabel.text = [subject objectForKey:@"auditoryNumber"];
+    if ([class count] == 1) {
+        ScheduleSingleCell *singleCell = [tableView dequeueReusableCellWithIdentifier:SingleCellIdentifier forIndexPath:indexPath];
+        NSDictionary *subject = [class objectAtIndex:0];
+        
+        // filling data for single schedule cell
+        singleCell.startTimeLabel.text = [subject objectForKey:@"startTime"];
+        singleCell.endTimeLabel.text = [subject objectForKey:@"endTime"];
+        singleCell.classTypeLabel.text = [subject objectForKey:@"classType"];
+        singleCell.subjectNameLabel.text = [subject objectForKey:@"subjectName"];
+        singleCell.auditoryNumberLabel.text = [subject objectForKey:@"auditoryNumber"];
+
+        cell = singleCell;
+//        return singleCell;
+    } else if ([class count] == 2) {
+        ScheduleDoubleCell *doubleCell = [tableView dequeueReusableCellWithIdentifier:DoubleCellIdentifier forIndexPath:indexPath];
+        NSDictionary *firstSubject = [class objectAtIndex:0];
+        NSDictionary *secondSubject = [class objectAtIndex:1];
+        
+        doubleCell.startTimeLabel.text = [firstSubject objectForKey:@"startTime"];
+        doubleCell.endTimeLabel.text = [firstSubject objectForKey:@"endTime"];
+        
+        doubleCell.firstClassTypeLabel.text = [firstSubject objectForKey:@"classType"];
+        doubleCell.firstSubjectNameLabel.text = [firstSubject objectForKey:@"subjectName"];
+        doubleCell.firstAuditoryNumberLabel.text = [firstSubject objectForKey:@"auditoryNumber"];
+        doubleCell.secondClassTypeLabel.text = [secondSubject objectForKey:@"classType"];
+        doubleCell.secondSubjectNameLabel.text = [secondSubject objectForKey:@"subjectName"];
+        doubleCell.secondAuditoryNumberLabel.text = [secondSubject objectForKey:@"auditoryNumber"];
     
+        cell = doubleCell;
+//        return doubleCell;
+    }
+    
+    // vertical separator
     CGRect frame = CGRectMake(60.0, 0.0, 1.0, cell.contentView.frame.size.height - 0.0);
-    UIView *separator1 = [[UIView alloc] initWithFrame:frame];
-    separator1.backgroundColor = [UIColor lightGrayColor];
-    [cell.contentView addSubview:separator1];
+    UIView *verticalSeparator = [[UIView alloc] initWithFrame:frame];
+    verticalSeparator.backgroundColor = [UIColor lightGrayColor];
+    [cell.contentView addSubview:verticalSeparator];
     
     return cell;
 }
@@ -111,6 +156,19 @@
     NSArray *days = [NSArray arrayWithObjects:@"Понеділок", @"Вівторок", @"Середа", @"Четвер", @"Пятниця", nil];
     
     return [days objectAtIndex:section];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSArray *class;
+    if (self.segmentedControl.selectedSegmentIndex == 0) {
+        class = [[self.scheduleForFirstWeek objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+    } else class = [[self.scheduleForSecondWeek objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+    
+    if ([class count] == 1) {
+        return 82;
+    } else
+        return 164;
 }
 
 @end

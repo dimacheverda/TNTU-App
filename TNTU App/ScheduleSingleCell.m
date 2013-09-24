@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Dima. All rights reserved.
 //
 
-#import "ScheduleCell.h"
+#import "ScheduleSingleCell.h"
 
-@implementation ScheduleCell
+@implementation ScheduleSingleCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
