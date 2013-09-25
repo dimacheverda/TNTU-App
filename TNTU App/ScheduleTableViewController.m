@@ -28,12 +28,25 @@
 {
     [super viewDidLoad];
     [self initInfo];
-
+    [self scrollToCurrentWeekDay];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)scrollToCurrentWeekDay
+{
+    NSDate *today = [NSDate date];
+    NSDateFormatter *myFormatter = [[NSDateFormatter alloc] init];
+    [myFormatter setDateFormat:@"EEEE"]; // day, like "Saturday"
+    [myFormatter setDateFormat:@"c"]; // day number, like 7 for saturday
+    
+    NSString *dayOfWeek = [myFormatter stringFromDate:today];
+    NSLog(@"Today is: %@", dayOfWeek);
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:[dayOfWeek intValue]-1];
+    [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
 }
 
 - (void)initInfo
@@ -138,6 +151,13 @@
         doubleCell.secondSubjectNameLabel.text = [secondSubject objectForKey:@"subjectName"];
         doubleCell.secondAuditoryNumberLabel.text = [secondSubject objectForKey:@"auditoryNumber"];
     
+        //horizontal separator
+        CGRect frame = CGRectMake(70.0, 82.0, 243.0, 1.0);
+        UIView *horizontalSeparator = [[UIView alloc] initWithFrame:frame];
+        horizontalSeparator.backgroundColor = [UIColor lightGrayColor];
+        [doubleCell.contentView addSubview:horizontalSeparator];
+        
+        
         cell = doubleCell;
 //        return doubleCell;
     }
@@ -147,6 +167,8 @@
     UIView *verticalSeparator = [[UIView alloc] initWithFrame:frame];
     verticalSeparator.backgroundColor = [UIColor lightGrayColor];
     [cell.contentView addSubview:verticalSeparator];
+    
+    
     
     return cell;
 }
@@ -166,9 +188,9 @@
     } else class = [[self.scheduleForSecondWeek objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
     
     if ([class count] == 1) {
-        return 82;
+        return 82.0;
     } else
-        return 164;
+        return 164.0;
 }
 
 @end
