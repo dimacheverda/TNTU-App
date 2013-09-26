@@ -44,8 +44,14 @@
     [myFormatter setDateFormat:@"c"]; // day number, like 7 for saturday
     
     NSString *dayOfWeek = [myFormatter stringFromDate:today];
-    NSLog(@"Today is: %@", dayOfWeek);
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:[dayOfWeek intValue]-1];
+    NSInteger day = [dayOfWeek intValue];
+    NSLog(@"%@", dayOfWeek);
+    if (day > 5) {
+        day = 1;
+    }
+    
+//    NSLog(@"Today is: %@", dayOfWeek);
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:(day - 1)];
     [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
 }
 
