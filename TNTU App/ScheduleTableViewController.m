@@ -50,9 +50,10 @@
         day = 1;
     }
     
-    NSLog(@"Today is: %@", dayOfWeek);
+    NSLog(@"Today is: %d", day);
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:(day - 1)];
-    [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+    [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:NO];
+    NSLog(@"Today is: %d", day);
 }
 
 - (void)initInfo
@@ -197,6 +198,11 @@
         return 82.0;
     } else
         return 164.0;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [[tableView cellForRowAtIndexPath:indexPath] setSelected:NO];
 }
 
 @end

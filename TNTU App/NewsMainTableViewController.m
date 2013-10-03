@@ -48,6 +48,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [[tableView cellForRowAtIndexPath:indexPath] setSelected:NO];
     switch (indexPath.row) {
         case 1: {
             secondaryContent = [NSArray arrayWithObjects:@"Документація", @"Основні навчальні лабораторії", nil];

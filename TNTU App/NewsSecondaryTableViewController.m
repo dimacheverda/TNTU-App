@@ -44,6 +44,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [[tableView cellForRowAtIndexPath:indexPath] setSelected:NO];
     selectedTitle = [self.contentArray objectAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"Show Article" sender:self];
 }
