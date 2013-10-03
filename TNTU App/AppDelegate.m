@@ -12,7 +12,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    // nav bar text tint color
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:52.0/255.0 green:152.0/255.0 blue:219.0/255.0 alpha:1.0]];
+    
+    // nav bar background color
+//    UIColor *color = [UIColor colorWithRed:51/255.0f green:102/255.0f blue:153/255.0f alpha:1.0f];
+//    UIColor *color = [UIColor colorWithRed:0/255.0f green:51/255.0f blue:102/255.0f alpha:1.0f];  //#003366
+    UIColor *color = [UIColor colorWithRed:52.0/255.0 green:73.0/255.0 blue:94.0/255.0 alpha:1.0];   // #336699
+    [[UINavigationBar appearance] setBarTintColor:color];
+    
+    // setting nav bar title color
+    NSDictionary* attrs = @{UITextAttributeTextColor:[UIColor colorWithRed:52.0/255.0 green:152.0/255.0 blue:219.0/255.0 alpha:1.0]};
+    [[UINavigationBar appearance] setTitleTextAttributes:attrs];
+    
+    // set tab bar color
+    [[UITabBar appearance] setBarTintColor:color];
+    [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    // status bar color
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     return YES;
 }
 							

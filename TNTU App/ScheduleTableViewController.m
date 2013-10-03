@@ -50,7 +50,7 @@
         day = 1;
     }
     
-//    NSLog(@"Today is: %@", dayOfWeek);
+    NSLog(@"Today is: %@", dayOfWeek);
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:(day - 1)];
     [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
 }
