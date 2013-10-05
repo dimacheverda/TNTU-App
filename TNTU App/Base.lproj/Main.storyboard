@@ -383,6 +383,7 @@
                             <outlet property="delegate" destination="kxN-3a-UhD" id="ccO-f1-Lzd"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="lbv-ib-V8A">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="lvB-EI-WJp">
@@ -393,7 +394,7 @@
                                 <segment title="Second"/>
                             </segments>
                             <connections>
-                                <action selector="segmentedControlValueChanged:" destination="kxN-3a-UhD" eventType="valueChanged" id="LVM-Gy-s8g"/>
+                                <action selector="segmentedControlValueChanged" destination="kxN-3a-UhD" eventType="valueChanged" id="Sm7-G0-9yh"/>
                             </connections>
                         </segmentedControl>
                     </navigationItem>

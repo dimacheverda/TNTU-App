@@ -21,14 +21,14 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
-    [self initInfo];
+    [self segmentedControlValueChanged];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self initInfo];
-    [self scrollToCurrentWeekDay];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -36,24 +36,26 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)scrollToCurrentWeekDay
+- (void)scrollToCurrentWeekDayTableView:(UITableView *)tableView
 {
     NSDate *today = [NSDate date];
     NSDateFormatter *myFormatter = [[NSDateFormatter alloc] init];
     [myFormatter setDateFormat:@"EEEE"]; // day, like "Saturday"
     [myFormatter setDateFormat:@"c"]; // day number, like 7 for saturday
-    
-    NSString *dayOfWeek = [myFormatter stringFromDate:today];
-    NSInteger day = [dayOfWeek intValue];
-    NSLog(@"%@", dayOfWeek);
+
+    NSInteger day = [[myFormatter stringFromDate:today] intValue];
+    day--;
+    day--;
     if (day > 5) {
         day = 1;
     }
-    
-    NSLog(@"Today is: %d", day);
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:(day - 1)];
-    [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:NO];
-    NSLog(@"Today is: %d", day);
+    day--;
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:day];
+    [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop
+                             animated:NO];
+    [tableView reloadData];
+    NSLog(@"section:%d   row:%d", indexPath.section, indexPath.row);
+    NSLog(@"Today is: %d day of the week", day+1);
 }
 
 - (void)initInfo
@@ -82,13 +84,16 @@
     NSArray *day4 = [NSArray arrayWithObjects:class1, class2, class3,class5, nil];
     NSArray *day5 = [NSArray arrayWithObjects:class3, class4, class5, nil];
     
+    // [NSArray arrayWithObjects:day2, day1, day5, day3, day4, nil];            norm
+    // [NSArray arrayWithObjects:day1, day2, day3, day4, day5, nil];            NE norm
     self.scheduleForFirstWeek = [NSArray arrayWithObjects:day1, day2, day3, day4, day5, nil];
     self.scheduleForSecondWeek = [NSArray arrayWithObjects:day2, day1, day5, day3, day4, nil];
 }
 
-- (IBAction)segmentedControlValueChanged:(id)sender
+- (IBAction)segmentedControlValueChanged
 {
     [self.tableView reloadData];
+    [self scrollToCurrentWeekDayTableView:self.tableView];
 }
 
 #pragma mark - Table view data source
@@ -102,6 +107,7 @@
             return [self.scheduleForSecondWeek count];
         }
     }
+    
     return 0;
 }
 
@@ -125,10 +131,11 @@
     NSArray *class = nil;
     UITableViewCell *cell = nil;
     
-    // checking witch week schedule to load
+    // checking which week schedule to load
     if (self.segmentedControl.selectedSegmentIndex == 0) {
         class = [[self.scheduleForFirstWeek objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
-    } else class = [[self.scheduleForSecondWeek objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+    } else
+        class = [[self.scheduleForSecondWeek objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
     
     if ([class count] == 1) {
         ScheduleSingleCell *singleCell = [tableView dequeueReusableCellWithIdentifier:SingleCellIdentifier forIndexPath:indexPath];
@@ -142,7 +149,6 @@
         singleCell.auditoryNumberLabel.text = [subject objectForKey:@"auditoryNumber"];
 
         cell = singleCell;
-//        return singleCell;
     } else if ([class count] == 2) {
         ScheduleDoubleCell *doubleCell = [tableView dequeueReusableCellWithIdentifier:DoubleCellIdentifier forIndexPath:indexPath];
         NSDictionary *firstSubject = [class objectAtIndex:0];
@@ -164,9 +170,7 @@
         horizontalSeparator.backgroundColor = [UIColor lightGrayColor];
         [doubleCell.contentView addSubview:horizontalSeparator];
         
-        
         cell = doubleCell;
-//        return doubleCell;
     }
     
     // vertical separator
@@ -174,8 +178,6 @@
     UIView *verticalSeparator = [[UIView alloc] initWithFrame:frame];
     verticalSeparator.backgroundColor = [UIColor lightGrayColor];
     [cell.contentView addSubview:verticalSeparator];
-    
-    
     
     return cell;
 }
