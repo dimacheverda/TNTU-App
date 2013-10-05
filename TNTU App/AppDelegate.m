@@ -26,8 +26,8 @@
     [[UINavigationBar appearance] setTitleTextAttributes:attrs];
     
     // set tab bar color
-    [[UITabBar appearance] setBarTintColor:color];
-    [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
+//    [[UITabBar appearance] setBarTintColor:color];
+    [[UITabBar appearance] setTintColor:color];
     
     // status bar color
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];

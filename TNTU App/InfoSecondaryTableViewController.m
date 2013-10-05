@@ -6,16 +6,16 @@
 //  Copyright (c) 2013 Dima. All rights reserved.
 //
 
-#import "NewsSecondaryTableViewController.h"
+#import "InfoSecondaryTableViewController.h"
 
-@interface NewsSecondaryTableViewController ()
+@interface InfoSecondaryTableViewController ()
 {
     NSString *selectedTitle;
 }
 
 @end
 
-@implementation NewsSecondaryTableViewController
+@implementation InfoSecondaryTableViewController
 
 - (void)viewDidLoad
 {

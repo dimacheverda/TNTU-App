@@ -20,8 +20,8 @@
 		32810D6817E7503600FF45C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32810D4A17E7503600FF45C8 /* UIKit.framework */; };
 		32810D7017E7503600FF45C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 32810D6E17E7503600FF45C8 /* InfoPlist.strings */; };
 		32810D7217E7503600FF45C8 /* TNTU_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D7117E7503600FF45C8 /* TNTU_AppTests.m */; };
-		32810D7D17E7521C00FF45C8 /* NewsMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D7C17E7521C00FF45C8 /* NewsMainTableViewController.m */; };
-		32810D7E17E7521C00FF45C8 /* NewsMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D7C17E7521C00FF45C8 /* NewsMainTableViewController.m */; };
+		32810D7D17E7521C00FF45C8 /* InfoMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D7C17E7521C00FF45C8 /* InfoMainTableViewController.m */; };
+		32810D7E17E7521C00FF45C8 /* InfoMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D7C17E7521C00FF45C8 /* InfoMainTableViewController.m */; };
 		32810D8E17E755B400FF45C8 /* 34@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32810D8A17E755B400FF45C8 /* 34@2x.png */; };
 		32810D8F17E755B400FF45C8 /* 34@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32810D8A17E755B400FF45C8 /* 34@2x.png */; };
 		32810D9017E755B400FF45C8 /* 41@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32810D8B17E755B400FF45C8 /* 41@2x.png */; };
@@ -30,12 +30,14 @@
 		32810D9317E755B400FF45C8 /* 34.png in Resources */ = {isa = PBXBuildFile; fileRef = 32810D8C17E755B400FF45C8 /* 34.png */; };
 		32810D9417E755B400FF45C8 /* 41.png in Resources */ = {isa = PBXBuildFile; fileRef = 32810D8D17E755B400FF45C8 /* 41.png */; };
 		32810D9517E755B400FF45C8 /* 41.png in Resources */ = {isa = PBXBuildFile; fileRef = 32810D8D17E755B400FF45C8 /* 41.png */; };
-		32810D9817E75FBD00FF45C8 /* NewsSecondaryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D9717E75FBD00FF45C8 /* NewsSecondaryTableViewController.m */; };
-		32810D9917E75FBD00FF45C8 /* NewsSecondaryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D9717E75FBD00FF45C8 /* NewsSecondaryTableViewController.m */; };
+		32810D9817E75FBD00FF45C8 /* InfoSecondaryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D9717E75FBD00FF45C8 /* InfoSecondaryTableViewController.m */; };
+		32810D9917E75FBD00FF45C8 /* InfoSecondaryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D9717E75FBD00FF45C8 /* InfoSecondaryTableViewController.m */; };
 		32810D9C17E78A3B00FF45C8 /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D9B17E78A3B00FF45C8 /* ArticleViewController.m */; };
 		32810D9D17E78A3B00FF45C8 /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D9B17E78A3B00FF45C8 /* ArticleViewController.m */; };
 		32810DA417E7A7F700FF45C8 /* GroupsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810DA317E7A7F700FF45C8 /* GroupsTableViewController.m */; };
 		32810DA517E7A7F700FF45C8 /* GroupsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810DA317E7A7F700FF45C8 /* GroupsTableViewController.m */; };
+		32858EB918003E9400F52906 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = 32858EB718003E9400F52906 /* 9.png */; };
+		32858EBA18003E9400F52906 /* 9@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32858EB818003E9400F52906 /* 9@2x.png */; };
 		3298464817F1BFC8000B8837 /* ScheduleDoubleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3298464717F1BFC8000B8837 /* ScheduleDoubleCell.m */; };
 		32C1EA4517EB3468000ED75A /* ScheduleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C1EA4417EB3468000ED75A /* ScheduleTableViewController.m */; };
 		32C1EA4917EB3A81000ED75A /* ScheduleSingleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C1EA4817EB3A81000ED75A /* ScheduleSingleCell.m */; };
@@ -69,18 +71,20 @@
 		32810D6D17E7503600FF45C8 /* TNTU AppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TNTU AppTests-Info.plist"; sourceTree = "<group>"; };
 		32810D6F17E7503600FF45C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		32810D7117E7503600FF45C8 /* TNTU_AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNTU_AppTests.m; sourceTree = "<group>"; };
-		32810D7B17E7521C00FF45C8 /* NewsMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsMainTableViewController.h; sourceTree = "<group>"; };
-		32810D7C17E7521C00FF45C8 /* NewsMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsMainTableViewController.m; sourceTree = "<group>"; };
+		32810D7B17E7521C00FF45C8 /* InfoMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoMainTableViewController.h; sourceTree = "<group>"; };
+		32810D7C17E7521C00FF45C8 /* InfoMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoMainTableViewController.m; sourceTree = "<group>"; };
 		32810D8A17E755B400FF45C8 /* 34@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "34@2x.png"; sourceTree = "<group>"; };
 		32810D8B17E755B400FF45C8 /* 41@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "41@2x.png"; sourceTree = "<group>"; };
 		32810D8C17E755B400FF45C8 /* 34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 34.png; sourceTree = "<group>"; };
 		32810D8D17E755B400FF45C8 /* 41.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 41.png; sourceTree = "<group>"; };
-		32810D9617E75FBD00FF45C8 /* NewsSecondaryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsSecondaryTableViewController.h; sourceTree = "<group>"; };
-		32810D9717E75FBD00FF45C8 /* NewsSecondaryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsSecondaryTableViewController.m; sourceTree = "<group>"; };
+		32810D9617E75FBD00FF45C8 /* InfoSecondaryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoSecondaryTableViewController.h; sourceTree = "<group>"; };
+		32810D9717E75FBD00FF45C8 /* InfoSecondaryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoSecondaryTableViewController.m; sourceTree = "<group>"; };
 		32810D9A17E78A3B00FF45C8 /* ArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleViewController.h; sourceTree = "<group>"; };
 		32810D9B17E78A3B00FF45C8 /* ArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleViewController.m; sourceTree = "<group>"; };
 		32810DA217E7A7F700FF45C8 /* GroupsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupsTableViewController.h; sourceTree = "<group>"; };
 		32810DA317E7A7F700FF45C8 /* GroupsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupsTableViewController.m; sourceTree = "<group>"; };
+		32858EB718003E9400F52906 /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
+		32858EB818003E9400F52906 /* 9@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "9@2x.png"; sourceTree = "<group>"; };
 		3298464617F1BFC8000B8837 /* ScheduleDoubleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleDoubleCell.h; sourceTree = "<group>"; };
 		3298464717F1BFC8000B8837 /* ScheduleDoubleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleDoubleCell.m; sourceTree = "<group>"; };
 		32C1EA4317EB3468000ED75A /* ScheduleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleTableViewController.h; sourceTree = "<group>"; };
@@ -149,7 +153,7 @@
 				32810D5517E7503600FF45C8 /* AppDelegate.h */,
 				32810D5617E7503600FF45C8 /* AppDelegate.m */,
 				32810D5817E7503600FF45C8 /* Main.storyboard */,
-				32810DA017E7A08C00FF45C8 /* News Tab */,
+				32810DA017E7A08C00FF45C8 /* Info Tab */,
 				32810DA117E7A09700FF45C8 /* Schedule Tab */,
 				32810D5E17E7503600FF45C8 /* Images.xcassets */,
 				32810D8317E7555E00FF45C8 /* Artwork */,
@@ -190,6 +194,8 @@
 		32810D8317E7555E00FF45C8 /* Artwork */ = {
 			isa = PBXGroup;
 			children = (
+				32858EB718003E9400F52906 /* 9.png */,
+				32858EB818003E9400F52906 /* 9@2x.png */,
 				32810D8A17E755B400FF45C8 /* 34@2x.png */,
 				32810D8C17E755B400FF45C8 /* 34.png */,
 				32810D8B17E755B400FF45C8 /* 41@2x.png */,
@@ -198,17 +204,17 @@
 			name = Artwork;
 			sourceTree = "<group>";
 		};
-		32810DA017E7A08C00FF45C8 /* News Tab */ = {
+		32810DA017E7A08C00FF45C8 /* Info Tab */ = {
 			isa = PBXGroup;
 			children = (
-				32810D7B17E7521C00FF45C8 /* NewsMainTableViewController.h */,
-				32810D7C17E7521C00FF45C8 /* NewsMainTableViewController.m */,
-				32810D9617E75FBD00FF45C8 /* NewsSecondaryTableViewController.h */,
-				32810D9717E75FBD00FF45C8 /* NewsSecondaryTableViewController.m */,
+				32810D7B17E7521C00FF45C8 /* InfoMainTableViewController.h */,
+				32810D7C17E7521C00FF45C8 /* InfoMainTableViewController.m */,
+				32810D9617E75FBD00FF45C8 /* InfoSecondaryTableViewController.h */,
+				32810D9717E75FBD00FF45C8 /* InfoSecondaryTableViewController.m */,
 				32810D9A17E78A3B00FF45C8 /* ArticleViewController.h */,
 				32810D9B17E78A3B00FF45C8 /* ArticleViewController.m */,
 			);
-			name = "News Tab";
+			name = "Info Tab";
 			sourceTree = "<group>";
 		};
 		32810DA117E7A09700FF45C8 /* Schedule Tab */ = {
@@ -302,7 +308,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32858EBA18003E9400F52906 /* 9@2x.png in Resources */,
 				32810D9217E755B400FF45C8 /* 34.png in Resources */,
+				32858EB918003E9400F52906 /* 9.png in Resources */,
 				32810D5F17E7503600FF45C8 /* Images.xcassets in Resources */,
 				32810D9417E755B400FF45C8 /* 41.png in Resources */,
 				32810D8E17E755B400FF45C8 /* 34@2x.png in Resources */,
@@ -332,10 +340,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				32810D5717E7503600FF45C8 /* AppDelegate.m in Sources */,
-				32810D9817E75FBD00FF45C8 /* NewsSecondaryTableViewController.m in Sources */,
+				32810D9817E75FBD00FF45C8 /* InfoSecondaryTableViewController.m in Sources */,
 				32C1EA4517EB3468000ED75A /* ScheduleTableViewController.m in Sources */,
 				32810D5317E7503600FF45C8 /* main.m in Sources */,
-				32810D7D17E7521C00FF45C8 /* NewsMainTableViewController.m in Sources */,
+				32810D7D17E7521C00FF45C8 /* InfoMainTableViewController.m in Sources */,
 				32810DA417E7A7F700FF45C8 /* GroupsTableViewController.m in Sources */,
 				3298464817F1BFC8000B8837 /* ScheduleDoubleCell.m in Sources */,
 				32C1EA4917EB3A81000ED75A /* ScheduleSingleCell.m in Sources */,
@@ -348,9 +356,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				32810D9D17E78A3B00FF45C8 /* ArticleViewController.m in Sources */,
-				32810D9917E75FBD00FF45C8 /* NewsSecondaryTableViewController.m in Sources */,
+				32810D9917E75FBD00FF45C8 /* InfoSecondaryTableViewController.m in Sources */,
 				32810D7217E7503600FF45C8 /* TNTU_AppTests.m in Sources */,
-				32810D7E17E7521C00FF45C8 /* NewsMainTableViewController.m in Sources */,
+				32810D7E17E7521C00FF45C8 /* InfoMainTableViewController.m in Sources */,
 				32810DA517E7A7F700FF45C8 /* GroupsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

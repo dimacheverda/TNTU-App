@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NewsSecondaryTableViewController : UITableViewController
+@interface InfoSecondaryTableViewController : UITableViewController
 
 @property (strong, nonatomic) NSArray *contentArray;
 

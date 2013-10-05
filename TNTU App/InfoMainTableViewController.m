@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 Dima. All rights reserved.
 //
 
-#import "NewsMainTableViewController.h"
-#import "NewsSecondaryTableViewController.h"
+#import "InfoMainTableViewController.h"
+#import "InfoSecondaryTableViewController.h"
 
-@interface NewsMainTableViewController ()
+@interface InfoMainTableViewController ()
 {
     NSArray *content;
     NSArray *secondaryContent;
@@ -18,11 +18,10 @@
 
 @end
 
-@implementation NewsMainTableViewController
+@implementation InfoMainTableViewController
 
 - (void)viewDidLoad
 {
-    [self.navigationItem setTitle:@"Newsss"];
     content = [NSArray arrayWithObjects:@"Персонал", @"Навчання", @"Працевлаштування", @"Програма подвійних дипломів", @"Наукова робота", @"Абітурієнту", @"Контакти", nil];
 }
 
@@ -78,7 +77,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"Secondary"]) {
-        if ([segue.destinationViewController isMemberOfClass:[NewsSecondaryTableViewController class]]) {
+        if ([segue.destinationViewController isMemberOfClass:[InfoSecondaryTableViewController class]]) {
             [segue.destinationViewController setContentArray:secondaryContent];
         }
     } else if ([segue.identifier isEqualToString:@"Show Article"]) {
