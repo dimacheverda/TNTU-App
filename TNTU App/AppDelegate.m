@@ -12,22 +12,27 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //rgb(52, 152, 219) peter river
+    //rgb(236, 240, 241) clouds
+    
     // nav bar text tint color
-    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:52.0/255.0 green:152.0/255.0 blue:219.0/255.0 alpha:1.0]];
+    UIColor *backgroundColor = [UIColor colorWithRed:52.0/255.0 green:152.0/255.0 blue:219.0/255.0 alpha:1.0];      // Peter River
+    UIColor *textColor = [UIColor colorWithRed:236.0/255.0 green:240.0/255.0 blue:241.0/255.0 alpha:1.0];           // Clouds
+    
+    [[UINavigationBar appearance] setTintColor:textColor];
     
     // nav bar background color
-//    UIColor *color = [UIColor colorWithRed:51/255.0f green:102/255.0f blue:153/255.0f alpha:1.0f];
-//    UIColor *color = [UIColor colorWithRed:0/255.0f green:51/255.0f blue:102/255.0f alpha:1.0f];  //#003366
-    UIColor *color = [UIColor colorWithRed:52.0/255.0 green:73.0/255.0 blue:94.0/255.0 alpha:1.0];   // #336699
-    [[UINavigationBar appearance] setBarTintColor:color];
+    [[UINavigationBar appearance] setBarTintColor:backgroundColor];
     
     // setting nav bar title color
-    NSDictionary* attrs = @{UITextAttributeTextColor:[UIColor colorWithRed:52.0/255.0 green:152.0/255.0 blue:219.0/255.0 alpha:1.0]};
+    NSDictionary* attrs = @{UITextAttributeTextColor:textColor};
     [[UINavigationBar appearance] setTitleTextAttributes:attrs];
     
-    // set tab bar color
-//    [[UITabBar appearance] setBarTintColor:color];
-    [[UITabBar appearance] setTintColor:color];
+    // set tab bar background color
+    [[UITabBar appearance] setBarTintColor:textColor];
+    
+    // set tab bar icons color
+    [[UITabBar appearance] setTintColor:backgroundColor];
     
     // status bar color
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
