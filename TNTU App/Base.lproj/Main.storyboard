@@ -438,12 +438,12 @@
                         </segmentedControl>
                         <barButtonItem key="rightBarButtonItem" title="1 група" id="ruv-wV-gd2">
                             <connections>
-                                <segue destination="lVd-cZ-vFQ" kind="custom" identifier="Popover Segue" customClass="WYStoryboardPopoverSegue" id="KMs-c8-YEI"/>
+                                <segue destination="lcr-CJ-vo4" kind="custom" identifier="Popover Segue" customClass="WYStoryboardPopoverSegue" id="djD-uS-MEa"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="groupNameBarButtonItem" destination="ruv-wV-gd2" id="AXD-tC-6ma"/>
+                        <outlet property="groupNameBarButtonItem" destination="ruv-wV-gd2" id="Lnv-Fg-kvq"/>
                         <outlet property="segmentedControl" destination="lvB-EI-WJp" id="fn0-3H-F7L"/>
                     </connections>
                 </tableViewController>
@@ -452,24 +452,24 @@
             <point key="canvasLocation" x="293" y="911"/>
         </scene>
         <!--Popover Table View Controller-->
-        <scene sceneID="Z6s-IR-G04">
+        <scene sceneID="vVy-dz-Hwk">
             <objects>
-                <tableViewController id="lVd-cZ-vFQ" customClass="PopoverTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="VJq-n7-u8Y">
+                <tableViewController id="lcr-CJ-vo4" customClass="PopoverTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="x7z-mT-eWP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
-                            <tableViewSection id="wbt-pj-jkp">
+                            <tableViewSection id="rAi-kZ-shE">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="JBA-RS-ZiS" style="IBUITableViewCellStyleDefault" id="T5b-Bh-AiW">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="tQC-9z-qTw" style="IBUITableViewCellStyleDefault" id="9Pk-Rd-VK3">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T5b-Bh-AiW" id="Tg9-ko-Sef">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Pk-Rd-VK3" id="KEe-J5-XmL">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="1 група" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JBA-RS-ZiS">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="1 група" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tQC-9z-qTw">
                                                     <rect key="frame" x="15" y="0.0" width="290" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -479,14 +479,14 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="7La-PI-xbZ" style="IBUITableViewCellStyleDefault" id="Zzf-uQ-Oyn">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="NOc-ry-hEi" style="IBUITableViewCellStyleDefault" id="EOY-5X-PQV">
                                         <rect key="frame" x="0.0" y="44" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zzf-uQ-Oyn" id="ATL-oH-W0I">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EOY-5X-PQV" id="z1O-ay-Yg9">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="2 група" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7La-PI-xbZ">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="2 група" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NOc-ry-hEi">
                                                     <rect key="frame" x="15" y="0.0" width="290" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -500,12 +500,12 @@
                             </tableViewSection>
                         </sections>
                         <connections>
-                            <outlet property="dataSource" destination="lVd-cZ-vFQ" id="Lm3-qA-zXd"/>
-                            <outlet property="delegate" destination="lVd-cZ-vFQ" id="WZa-y2-lt5"/>
+                            <outlet property="dataSource" destination="lcr-CJ-vo4" id="VdK-44-K1B"/>
+                            <outlet property="delegate" destination="lcr-CJ-vo4" id="udq-fX-2af"/>
                         </connections>
                     </tableView>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="k93-yq-ri4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0R0-MP-51K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="836" y="911"/>
         </scene>

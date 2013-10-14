@@ -10,7 +10,10 @@
 #import "ScheduleTableViewController.h"
 #import "WYPopoverController.h"
 
-@interface PopoverTableViewController () <WYPopoverControllerDelegate>
+@interface PopoverTableViewController ()
+{
+    NSString *groupName;
+}
 
 @end
 
@@ -27,19 +30,21 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.groupNumber inSection:0];
+    [[self.tableView cellForRowAtIndexPath:indexPath] setAccessoryType:UITableViewCellAccessoryCheckmark];
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [[tableView cellForRowAtIndexPath:indexPath] setAccessoryType:UITableViewCellAccessoryCheckmark];
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    
-    [(ScheduleTableViewController *)self.navigationController.parentViewController setCurrentGroupName:[tableView cellForRowAtIndexPath:indexPath].textLabel.text];
-    
+    groupName = [tableView cellForRowAtIndexPath:indexPath].textLabel.text;
+//    NSLog(@"did select row: %@", groupName);
+    [self.delegate popoverTableViewController:self didSelectGroupName:groupName];
 }
-
-- (BOOL)popoverControllerShouldDismissPopover:(WYPopoverController *)controller
-{
-    return YES;
-}
-
 
 @end

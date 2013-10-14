@@ -13,13 +13,12 @@
 #import "WYPopoverController.h"
 #import "WYStoryboardPopoverSegue.h"
 
-@interface ScheduleTableViewController () <WYPopoverControllerDelegate>
+@interface ScheduleTableViewController () <WYPopoverControllerDelegate, PopoverTableViewControllerDelegate>
 {
     WYPopoverController *popoverController;
 }
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *groupNameBarButtonItem;
 
 @end
 
@@ -103,20 +102,14 @@
 {
     if ([segue.identifier isEqualToString:@"Popover Segue"])
     {
-        WYStoryboardPopoverSegue* popoverSegue = (WYStoryboardPopoverSegue*)segue;
-        
-        UIViewController* destinationViewController = (UIViewController *)segue.destinationViewController;
-        destinationViewController.preferredContentSize = CGSizeMake(280, 88);
-        
+        WYStoryboardPopoverSegue *popoverSegue = (WYStoryboardPopoverSegue*)segue;
+        PopoverTableViewController *popoverTableViewController = segue.destinationViewController;
+        popoverTableViewController.preferredContentSize = CGSizeMake(280, 88);
+        popoverTableViewController.delegate = self;
+        [popoverTableViewController setGroupNumber:self.groupNumber];
         popoverController = [popoverSegue popoverControllerWithSender:sender permittedArrowDirections:WYPopoverArrowDirectionAny animated:YES];
         popoverController.delegate = self;
     }
-}
-
-- (void)setCurrentGroupName:(NSString *)currentGroupName
-{
-    _currentGroupName = currentGroupName;
-    NSLog(@"%@", _currentGroupName);
 }
 
 #pragma mark - Table view data source
@@ -228,6 +221,37 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [[tableView cellForRowAtIndexPath:indexPath] setSelected:NO];
+}
+
+#pragma mark - WYPopoverControllerDelegate
+
+- (BOOL)popoverControllerShouldDismissPopover:(WYPopoverController *)aPopoverController
+{
+//    NSLog(@"should dismiss");
+    return YES;
+}
+
+- (void)popoverControllerDidDismissPopover:(WYPopoverController *)aPopoverController
+{
+//    NSLog(@"did dismiss");
+    popoverController.delegate = nil;
+    popoverController = nil;
+}
+
+#pragma mark - PopoverTableViewControllerDelegate
+
+- (void)popoverTableViewController:(PopoverTableViewController *)controller didSelectGroupName:(NSString *)groupName
+{
+//    NSLog(@"group name: %@", groupName);
+    [self.groupNameBarButtonItem setTitle:groupName];
+    if ([groupName isEqualToString:@"1 група"]) {
+        self.groupNumber = 0;
+    } else
+        self.groupNumber = 1;
+    controller.delegate = nil;
+    [popoverController dismissPopoverAnimated:YES];
+    popoverController.delegate = nil;
+    popoverController = nil;
 }
 
 @end

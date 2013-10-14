@@ -8,8 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-
+@protocol PopoverTableViewControllerDelegate;
 
 @interface PopoverTableViewController : UITableViewController
+
+@property (nonatomic, weak) id <PopoverTableViewControllerDelegate> delegate;
+@property (nonatomic) NSInteger groupNumber;
+
+@end
+
+@protocol PopoverTableViewControllerDelegate <NSObject>
+
+@required
+
+- (void)popoverTableViewController:(PopoverTableViewController *)controller
+                didSelectGroupName:(NSString *)groupName;
 
 @end

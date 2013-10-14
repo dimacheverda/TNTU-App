@@ -12,7 +12,7 @@
 
 @property (strong, nonatomic) NSArray *scheduleForFirstWeek;
 @property (strong, nonatomic) NSArray *scheduleForSecondWeek;
-
-@property (strong, nonatomic) NSString* currentGroupName;
+@property (nonatomic) NSInteger groupNumber;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *groupNameBarButtonItem;
 
 @end
