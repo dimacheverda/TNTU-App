@@ -9,10 +9,17 @@
 #import "ScheduleTableViewController.h"
 #import "ScheduleSingleCell.h"
 #import "ScheduleDoubleCell.h"
+#import "PopoverTableViewController.h"
+#import "WYPopoverController.h"
+#import "WYStoryboardPopoverSegue.h"
 
-@interface ScheduleTableViewController ()
+@interface ScheduleTableViewController () <WYPopoverControllerDelegate>
+{
+    WYPopoverController *popoverController;
+}
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *groupNameBarButtonItem;
 
 @end
 
@@ -44,8 +51,6 @@
     [myFormatter setDateFormat:@"c"]; // day number, like 7 for saturday
 
     NSInteger day = [[myFormatter stringFromDate:today] intValue];
-    day--;
-    day--;
     if (day > 5) {
         day = 1;
     }
@@ -54,8 +59,8 @@
     [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop
                              animated:NO];
     [tableView reloadData];
-    NSLog(@"section:%d   row:%d", indexPath.section, indexPath.row);
-    NSLog(@"Today is: %d day of the week", day+1);
+//    NSLog(@"section:%d   row:%d", indexPath.section, indexPath.row);
+//    NSLog(@"Today is: %d day of the week", day+1);
 }
 
 - (void)initInfo
@@ -84,8 +89,6 @@
     NSArray *day4 = [NSArray arrayWithObjects:class1, class2, class3,class5, nil];
     NSArray *day5 = [NSArray arrayWithObjects:class3, class4, class5, nil];
     
-    // [NSArray arrayWithObjects:day2, day1, day5, day3, day4, nil];            norm
-    // [NSArray arrayWithObjects:day1, day2, day3, day4, day5, nil];            NE norm
     self.scheduleForFirstWeek = [NSArray arrayWithObjects:day1, day2, day3, day4, day5, nil];
     self.scheduleForSecondWeek = [NSArray arrayWithObjects:day2, day1, day5, day3, day4, nil];
 }
@@ -94,6 +97,26 @@
 {
     [self.tableView reloadData];
     [self scrollToCurrentWeekDayTableView:self.tableView];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"Popover Segue"])
+    {
+        WYStoryboardPopoverSegue* popoverSegue = (WYStoryboardPopoverSegue*)segue;
+        
+        UIViewController* destinationViewController = (UIViewController *)segue.destinationViewController;
+        destinationViewController.preferredContentSize = CGSizeMake(280, 88);
+        
+        popoverController = [popoverSegue popoverControllerWithSender:sender permittedArrowDirections:WYPopoverArrowDirectionAny animated:YES];
+        popoverController.delegate = self;
+    }
+}
+
+- (void)setCurrentGroupName:(NSString *)currentGroupName
+{
+    _currentGroupName = currentGroupName;
+    NSLog(@"%@", _currentGroupName);
 }
 
 #pragma mark - Table view data source

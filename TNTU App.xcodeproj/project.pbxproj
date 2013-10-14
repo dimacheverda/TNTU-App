@@ -36,6 +36,9 @@
 		32810D9D17E78A3B00FF45C8 /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D9B17E78A3B00FF45C8 /* ArticleViewController.m */; };
 		32810DA417E7A7F700FF45C8 /* GroupsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810DA317E7A7F700FF45C8 /* GroupsTableViewController.m */; };
 		32810DA517E7A7F700FF45C8 /* GroupsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810DA317E7A7F700FF45C8 /* GroupsTableViewController.m */; };
+		32821A70180B362900F07112 /* WYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32821A6D180B362900F07112 /* WYPopoverController.m */; };
+		32821A71180B362900F07112 /* WYStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 32821A6F180B362900F07112 /* WYStoryboardPopoverSegue.m */; };
+		32821A75180B38A500F07112 /* PopoverTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32821A74180B38A500F07112 /* PopoverTableViewController.m */; };
 		32858EB918003E9400F52906 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = 32858EB718003E9400F52906 /* 9.png */; };
 		32858EBA18003E9400F52906 /* 9@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32858EB818003E9400F52906 /* 9@2x.png */; };
 		3298464817F1BFC8000B8837 /* ScheduleDoubleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3298464717F1BFC8000B8837 /* ScheduleDoubleCell.m */; };
@@ -83,6 +86,12 @@
 		32810D9B17E78A3B00FF45C8 /* ArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleViewController.m; sourceTree = "<group>"; };
 		32810DA217E7A7F700FF45C8 /* GroupsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupsTableViewController.h; sourceTree = "<group>"; };
 		32810DA317E7A7F700FF45C8 /* GroupsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupsTableViewController.m; sourceTree = "<group>"; };
+		32821A6C180B362900F07112 /* WYPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYPopoverController.h; sourceTree = "<group>"; };
+		32821A6D180B362900F07112 /* WYPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYPopoverController.m; sourceTree = "<group>"; };
+		32821A6E180B362900F07112 /* WYStoryboardPopoverSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYStoryboardPopoverSegue.h; sourceTree = "<group>"; };
+		32821A6F180B362900F07112 /* WYStoryboardPopoverSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYStoryboardPopoverSegue.m; sourceTree = "<group>"; };
+		32821A73180B38A500F07112 /* PopoverTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverTableViewController.h; sourceTree = "<group>"; };
+		32821A74180B38A500F07112 /* PopoverTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverTableViewController.m; sourceTree = "<group>"; };
 		32858EB718003E9400F52906 /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
 		32858EB818003E9400F52906 /* 9@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "9@2x.png"; sourceTree = "<group>"; };
 		3298464617F1BFC8000B8837 /* ScheduleDoubleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleDoubleCell.h; sourceTree = "<group>"; };
@@ -155,6 +164,7 @@
 				32810D5817E7503600FF45C8 /* Main.storyboard */,
 				32810DA017E7A08C00FF45C8 /* Info Tab */,
 				32810DA117E7A09700FF45C8 /* Schedule Tab */,
+				32821A72180B362E00F07112 /* WYPopover */,
 				32810D5E17E7503600FF45C8 /* Images.xcassets */,
 				32810D8317E7555E00FF45C8 /* Artwork */,
 				32810D4D17E7503600FF45C8 /* Supporting Files */,
@@ -228,8 +238,21 @@
 				32C1EA4817EB3A81000ED75A /* ScheduleSingleCell.m */,
 				3298464617F1BFC8000B8837 /* ScheduleDoubleCell.h */,
 				3298464717F1BFC8000B8837 /* ScheduleDoubleCell.m */,
+				32821A73180B38A500F07112 /* PopoverTableViewController.h */,
+				32821A74180B38A500F07112 /* PopoverTableViewController.m */,
 			);
 			name = "Schedule Tab";
+			sourceTree = "<group>";
+		};
+		32821A72180B362E00F07112 /* WYPopover */ = {
+			isa = PBXGroup;
+			children = (
+				32821A6C180B362900F07112 /* WYPopoverController.h */,
+				32821A6D180B362900F07112 /* WYPopoverController.m */,
+				32821A6E180B362900F07112 /* WYStoryboardPopoverSegue.h */,
+				32821A6F180B362900F07112 /* WYStoryboardPopoverSegue.m */,
+			);
+			name = WYPopover;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,14 +363,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				32810D5717E7503600FF45C8 /* AppDelegate.m in Sources */,
+				32821A75180B38A500F07112 /* PopoverTableViewController.m in Sources */,
 				32810D9817E75FBD00FF45C8 /* InfoSecondaryTableViewController.m in Sources */,
 				32C1EA4517EB3468000ED75A /* ScheduleTableViewController.m in Sources */,
+				32821A70180B362900F07112 /* WYPopoverController.m in Sources */,
 				32810D5317E7503600FF45C8 /* main.m in Sources */,
 				32810D7D17E7521C00FF45C8 /* InfoMainTableViewController.m in Sources */,
 				32810DA417E7A7F700FF45C8 /* GroupsTableViewController.m in Sources */,
 				3298464817F1BFC8000B8837 /* ScheduleDoubleCell.m in Sources */,
 				32C1EA4917EB3A81000ED75A /* ScheduleSingleCell.m in Sources */,
 				32810D9C17E78A3B00FF45C8 /* ArticleViewController.m in Sources */,
+				32821A71180B362900F07112 /* WYStoryboardPopoverSegue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
