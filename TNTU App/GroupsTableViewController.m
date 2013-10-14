@@ -95,7 +95,14 @@
     return cell;
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSArray *yearsArray = @[@"1 курс",@"2 курс",@"3 курс",@"4 курс",@"5 курс"];
+    
+    return [yearsArray objectAtIndex:section];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"Show Schedule"]) {
         UITableViewCell *cell = sender;

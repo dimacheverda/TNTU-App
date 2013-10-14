@@ -8,7 +8,7 @@
 
 #import "ScheduleTableViewController.h"
 #import "ScheduleSingleCell.h"
-#import "ScheduleDoubleCell.h"
+//#import "ScheduleDoubleCell.h"
 #import "PopoverTableViewController.h"
 #import "WYPopoverController.h"
 #import "WYStoryboardPopoverSegue.h"
@@ -142,7 +142,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *SingleCellIdentifier = @"Single Cell";
-    static NSString *DoubleCellIdentifier = @"Double Cell";
+//    static NSString *DoubleCellIdentifier = @"Double Cell";
     
     NSArray *class = nil;
     UITableViewCell *cell = nil;
@@ -166,27 +166,39 @@
 
         cell = singleCell;
     } else if ([class count] == 2) {
-        ScheduleDoubleCell *doubleCell = [tableView dequeueReusableCellWithIdentifier:DoubleCellIdentifier forIndexPath:indexPath];
-        NSDictionary *firstSubject = [class objectAtIndex:0];
-        NSDictionary *secondSubject = [class objectAtIndex:1];
+        ScheduleSingleCell *singleCell = [tableView dequeueReusableCellWithIdentifier:SingleCellIdentifier forIndexPath:indexPath];
+        NSDictionary *subject = [class objectAtIndex:self.groupNumber];
         
-        doubleCell.startTimeLabel.text = [firstSubject objectForKey:@"startTime"];
-        doubleCell.endTimeLabel.text = [firstSubject objectForKey:@"endTime"];
+        // filling data for single schedule cell
+        singleCell.startTimeLabel.text = [subject objectForKey:@"startTime"];
+        singleCell.endTimeLabel.text = [subject objectForKey:@"endTime"];
+        singleCell.classTypeLabel.text = [subject objectForKey:@"classType"];
+        singleCell.subjectNameLabel.text = [subject objectForKey:@"subjectName"];
+        singleCell.auditoryNumberLabel.text = [subject objectForKey:@"auditoryNumber"];
         
-        doubleCell.firstClassTypeLabel.text = [firstSubject objectForKey:@"classType"];
-        doubleCell.firstSubjectNameLabel.text = [firstSubject objectForKey:@"subjectName"];
-        doubleCell.firstAuditoryNumberLabel.text = [firstSubject objectForKey:@"auditoryNumber"];
-        doubleCell.secondClassTypeLabel.text = [secondSubject objectForKey:@"classType"];
-        doubleCell.secondSubjectNameLabel.text = [secondSubject objectForKey:@"subjectName"];
-        doubleCell.secondAuditoryNumberLabel.text = [secondSubject objectForKey:@"auditoryNumber"];
-    
-        //horizontal separator
-        CGRect frame = CGRectMake(70.0, 82.0, 243.0, 1.0);
-        UIView *horizontalSeparator = [[UIView alloc] initWithFrame:frame];
-        horizontalSeparator.backgroundColor = [UIColor lightGrayColor];
-        [doubleCell.contentView addSubview:horizontalSeparator];
+        cell = singleCell;
         
-        cell = doubleCell;
+//        ScheduleDoubleCell *doubleCell = [tableView dequeueReusableCellWithIdentifier:DoubleCellIdentifier forIndexPath:indexPath];
+//        NSDictionary *firstSubject = [class objectAtIndex:0];
+//        NSDictionary *secondSubject = [class objectAtIndex:1];
+//        
+//        doubleCell.startTimeLabel.text = [firstSubject objectForKey:@"startTime"];
+//        doubleCell.endTimeLabel.text = [firstSubject objectForKey:@"endTime"];
+//        
+//        doubleCell.firstClassTypeLabel.text = [firstSubject objectForKey:@"classType"];
+//        doubleCell.firstSubjectNameLabel.text = [firstSubject objectForKey:@"subjectName"];
+//        doubleCell.firstAuditoryNumberLabel.text = [firstSubject objectForKey:@"auditoryNumber"];
+//        doubleCell.secondClassTypeLabel.text = [secondSubject objectForKey:@"classType"];
+//        doubleCell.secondSubjectNameLabel.text = [secondSubject objectForKey:@"subjectName"];
+//        doubleCell.secondAuditoryNumberLabel.text = [secondSubject objectForKey:@"auditoryNumber"];
+//    
+//        //horizontal separator
+//        CGRect frame = CGRectMake(70.0, 82.0, 243.0, 1.0);
+//        UIView *horizontalSeparator = [[UIView alloc] initWithFrame:frame];
+//        horizontalSeparator.backgroundColor = [UIColor lightGrayColor];
+//        [doubleCell.contentView addSubview:horizontalSeparator];
+//        
+//        cell = doubleCell;
     }
     
     // vertical separator
@@ -198,7 +210,7 @@
     return cell;
 }
 
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     NSArray *days = [NSArray arrayWithObjects:@"Понеділок", @"Вівторок", @"Середа", @"Четвер", @"Пятниця", nil];
     
@@ -207,15 +219,15 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSArray *class;
-    if (self.segmentedControl.selectedSegmentIndex == 0) {
-        class = [[self.scheduleForFirstWeek objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
-    } else class = [[self.scheduleForSecondWeek objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
-    
-    if ([class count] == 1) {
+//    NSArray *class;
+//    if (self.segmentedControl.selectedSegmentIndex == 0) {
+//        class = [[self.scheduleForFirstWeek objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+//    } else class = [[self.scheduleForSecondWeek objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+//    
+//    if ([class count] == 1) {
         return 82.0;
-    } else
-        return 164.0;
+//    } else
+//        return 164.0;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -252,6 +264,9 @@
     [popoverController dismissPopoverAnimated:YES];
     popoverController.delegate = nil;
     popoverController = nil;
+    
+    [self.tableView reloadData];
+    [self scrollToCurrentWeekDayTableView:self.tableView];
 }
 
 @end
