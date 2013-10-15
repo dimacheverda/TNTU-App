@@ -25,7 +25,7 @@
     [[UINavigationBar appearance] setBarTintColor:backgroundColor];
     
     // setting nav bar title color
-    NSDictionary* attrs = @{UITextAttributeTextColor:textColor};
+    NSDictionary* attrs = @{NSForegroundColorAttributeName:textColor};
     [[UINavigationBar appearance] setTitleTextAttributes:attrs];
     
     // set tab bar background color
