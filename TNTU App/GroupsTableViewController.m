@@ -16,27 +16,27 @@
 
 @implementation GroupsTableViewController
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:YES];
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     NSArray *fis1 = [NSArray arrayWithObjects:@"СБ-11", @"СІ-11", @"СН-11", @"СН-12", @"СП-11", nil];
     NSArray *fis2 = [NSArray arrayWithObjects:@"СБ-21", @"СІ-21", @"СН-21", @"СП-21", nil];
     NSArray *fis3 = [NSArray arrayWithObjects:@"СІ-31", @"СІс-31", @"СН-31", @"СНс-31", @"СП-31", @"СПс-31", nil];
     NSArray *fis4 = [NSArray arrayWithObjects:@"СІ-41", @"СІ-42", @"СН-41", @"СНс-41", @"СНс-42", @"СП-41", nil];
     
     self.allGroups = [NSArray arrayWithObjects:fis1, fis2, fis3, fis4, nil];
-
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
- 
+    
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
 }
 
 #pragma mark - Table view data source

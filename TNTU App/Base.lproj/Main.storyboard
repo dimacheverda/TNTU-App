@@ -29,7 +29,7 @@
         <scene sceneID="XOT-r3-yay">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0on-bx-PVs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Інфо" image="9.png" id="qJf-Yk-vwR"/>
+                    <tabBarItem key="tabBarItem" title="Інфо" id="qJf-Yk-vwR"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="yXN-ov-Cjx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -181,7 +181,7 @@
         <scene sceneID="bR1-yL-Tl5">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OZe-Ak-pXD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Розклад" image="41.png" id="L73-jB-vG1"/>
+                    <tabBarItem key="tabBarItem" title="Розклад" id="L73-jB-vG1"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="UtZ-Xt-ezZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -228,7 +228,7 @@
             </objects>
             <point key="canvasLocation" x="-248" y="911"/>
         </scene>
-        <!--News Table View Controller - Root View Controller-->
+        <!--News Table View Controller - Новини-->
         <scene sceneID="DQA-Ae-5LS">
             <objects>
                 <tableViewController id="u9C-Ti-123" customClass="NewsTableViewController" sceneMemberID="viewController">
@@ -264,7 +264,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="ZKU-0i-DFq"/>
+                    <navigationItem key="navigationItem" title="Новини" id="ZKU-0i-DFq"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LZ0-nB-ugv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -274,7 +274,7 @@
         <scene sceneID="bh4-bj-dxM">
             <objects>
                 <navigationController title="Новини" definesPresentationContext="YES" id="ITS-Iy-1P5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Новини" image="34.png" id="sAl-qf-q4d"/>
+                    <tabBarItem key="tabBarItem" title="Новини" id="sAl-qf-q4d"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="HpV-oF-w16">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -527,11 +527,6 @@
             <point key="canvasLocation" x="836" y="911"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="34.png" width="32" height="32"/>
-        <image name="41.png" width="32" height="32"/>
-        <image name="9.png" width="32" height="32"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -25,6 +25,37 @@
     content = [NSArray arrayWithObjects:@"Персонал", @"Навчання", @"Працевлаштування", @"Програма подвійних дипломів", @"Наукова робота", @"Абітурієнту", @"Контакти", nil];
 }
 
+- (NSMutableDictionary *)loadDictionaryFromPlistFromDropboxLink:(NSString *)urlString
+{
+    __block NSMutableDictionary *database = nil;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        NSString *errorDesc = nil;
+        NSPropertyListFormat format;
+        
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+        NSData *urlData = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlString]];
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        
+        database = (NSMutableDictionary *)[NSPropertyListSerialization
+                                           propertyListFromData:urlData
+                                           mutabilityOption:NSPropertyListMutableContainersAndLeaves
+                                           format:&format
+                                           errorDescription:&errorDesc];
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSString *url = [database objectForKey:@"Appstore Link"];
+        [defaults setObject:url forKey:@"Appstore Link"];
+        [defaults synchronize];
+        NSLog(@"\n\n\\nmain%@\n\n\n\n", url);
+        if (!database) {
+            NSLog(@"Error reading plist: %@, format: %d", errorDesc, format);
+        }
+    });
+    return database;
+}
+
+
+#pragma mark - TableViewDataSource
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -73,6 +104,8 @@
     } else
         [self performSegueWithIdentifier:@"Show Article" sender:self];
 }
+
+#pragma mark
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {

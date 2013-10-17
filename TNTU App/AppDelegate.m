@@ -37,9 +37,22 @@
     // status bar color
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
+    // setting tab bar icons
+    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+    UITabBar *tabBar = tabBarController.tabBar;
+    UITabBarItem *tabBarItem1 = [tabBar.items objectAtIndex:0];
+    UITabBarItem *tabBarItem2 = [tabBar.items objectAtIndex:1];
+    UITabBarItem *tabBarItem3 = [tabBar.items objectAtIndex:2];
+    tabBarItem1.image = [UIImage imageNamed:@"info_line"];
+    tabBarItem1.selectedImage = [UIImage imageNamed:@"info_fill"];
+    tabBarItem2.image = [UIImage imageNamed:@"date_line"];
+    tabBarItem2.selectedImage = [UIImage imageNamed:@"date_fill"];
+    tabBarItem3.image = [UIImage imageNamed:@"recent_line"];
+    tabBarItem3.selectedImage = [UIImage imageNamed:@"recent_fill"];
+    
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
