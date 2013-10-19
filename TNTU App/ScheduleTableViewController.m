@@ -69,7 +69,7 @@
     NSDictionary *subject3 = [NSDictionary dictionaryWithObjectsAndKeys:@"11:10", @"startTime", @"12:30", @"endTime", @"Lecture", @"classType", @"Java", @"subjectName", @"K1-101", @"auditoryNumber", nil];
     NSDictionary *subject4 = [NSDictionary dictionaryWithObjectsAndKeys:@"13:00", @"startTime", @"14:20", @"endTime", @"Practice", @"classType", @"Philosophy", @"subjectName", @"K8-13", @"auditoryNumber", nil];
     NSDictionary *subject5 = [NSDictionary dictionaryWithObjectsAndKeys:@"14:40", @"startTime", @"16:00", @"endTime", @"Lecture", @"classType", @"History", @"subjectName", @"K2-86", @"auditoryNumber", nil];
-    
+//
     NSArray *class1 = [NSArray arrayWithObjects:subject1, nil];
     NSArray *class2 = [NSArray arrayWithObjects:subject1, subject3, nil];
     NSArray *class3 = [NSArray arrayWithObjects:subject2, nil];
@@ -87,6 +87,19 @@
     NSArray *day3 = [NSArray arrayWithObjects:class1, class4, class5, nil];
     NSArray *day4 = [NSArray arrayWithObjects:class1, class2, class3,class5, nil];
     NSArray *day5 = [NSArray arrayWithObjects:class3, class4, class5, nil];
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"schedule" ofType:@"plist"];
+//    NSDictionary *schedule = [NSDictionary dictionaryWithContentsOfFile:path];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    NSPropertyListFormat format;
+    NSString *errorDesc = nil;
+    NSDictionary *schedule =(NSDictionary *)[NSPropertyListSerialization
+                                                                propertyListFromData:data
+                                                                mutabilityOption:NSPropertyListMutableContainersAndLeaves
+                                                                format:&format
+                                                                errorDescription:&errorDesc];
+    
+    NSLog(@"%@", schedule);
     
     self.scheduleForFirstWeek = [NSArray arrayWithObjects:day1, day2, day3, day4, day5, nil];
     self.scheduleForSecondWeek = [NSArray arrayWithObjects:day2, day1, day5, day3, day4, nil];
