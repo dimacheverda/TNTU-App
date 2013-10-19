@@ -36,7 +36,6 @@
 		3287735D180D6A6000693E24 /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3287735C180D6A6000693E24 /* NewsTableViewCell.m */; };
 		32877363180D6CB500693E24 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 32877362180D6CB500693E24 /* placeholder.png */; };
 		3293771D180EEDA000D8172D /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3293771C180EEDA000D8172D /* Media.xcassets */; };
-		3298464817F1BFC8000B8837 /* ScheduleDoubleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3298464717F1BFC8000B8837 /* ScheduleDoubleCell.m */; };
 		32C1EA4517EB3468000ED75A /* ScheduleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C1EA4417EB3468000ED75A /* ScheduleTableViewController.m */; };
 		32C1EA4917EB3A81000ED75A /* ScheduleSingleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C1EA4817EB3A81000ED75A /* ScheduleSingleCell.m */; };
 /* End PBXBuildFile section */
@@ -90,8 +89,6 @@
 		3287735C180D6A6000693E24 /* NewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
 		32877362180D6CB500693E24 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		3293771C180EEDA000D8172D /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
-		3298464617F1BFC8000B8837 /* ScheduleDoubleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleDoubleCell.h; sourceTree = "<group>"; };
-		3298464717F1BFC8000B8837 /* ScheduleDoubleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleDoubleCell.m; sourceTree = "<group>"; };
 		32C1EA4317EB3468000ED75A /* ScheduleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleTableViewController.h; sourceTree = "<group>"; };
 		32C1EA4417EB3468000ED75A /* ScheduleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleTableViewController.m; sourceTree = "<group>"; };
 		32C1EA4717EB3A81000ED75A /* ScheduleSingleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleSingleCell.h; sourceTree = "<group>"; };
@@ -230,8 +227,6 @@
 				32C1EA4417EB3468000ED75A /* ScheduleTableViewController.m */,
 				32C1EA4717EB3A81000ED75A /* ScheduleSingleCell.h */,
 				32C1EA4817EB3A81000ED75A /* ScheduleSingleCell.m */,
-				3298464617F1BFC8000B8837 /* ScheduleDoubleCell.h */,
-				3298464717F1BFC8000B8837 /* ScheduleDoubleCell.m */,
 				32821A73180B38A500F07112 /* PopoverTableViewController.h */,
 				32821A74180B38A500F07112 /* PopoverTableViewController.m */,
 			);
@@ -370,7 +365,6 @@
 				32810D7D17E7521C00FF45C8 /* InfoMainTableViewController.m in Sources */,
 				32810DA417E7A7F700FF45C8 /* GroupsTableViewController.m in Sources */,
 				32877359180D69F700693E24 /* NewsTableViewController.m in Sources */,
-				3298464817F1BFC8000B8837 /* ScheduleDoubleCell.m in Sources */,
 				32C1EA4917EB3A81000ED75A /* ScheduleSingleCell.m in Sources */,
 				32810D9C17E78A3B00FF45C8 /* ArticleViewController.m in Sources */,
 				32821A71180B362900F07112 /* WYStoryboardPopoverSegue.m in Sources */,

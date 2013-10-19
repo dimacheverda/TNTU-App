@@ -7,8 +7,12 @@
 //
 
 #import "GroupsTableViewController.h"
+#import "ScheduleTableViewController.h"
 
 @interface GroupsTableViewController ()
+{
+    NSDictionary *schedule;
+}
 
 @property (strong, nonatomic) NSArray *allGroups;
 
@@ -27,6 +31,7 @@
     
     self.allGroups = [NSArray arrayWithObjects:fis1, fis2, fis3, fis4, nil];
     
+    [self loadScheduleFromFile];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -37,6 +42,20 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
+}
+
+- (void)loadScheduleFromFile
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"schedules" ofType:@"plist"];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    NSPropertyListFormat format;
+    NSString *errorDesc = nil;
+    schedule =(NSDictionary *)[NSPropertyListSerialization
+                                             propertyListFromData:data
+                                             mutabilityOption:NSPropertyListMutableContainersAndLeaves
+                                             format:&format
+                                             errorDescription:&errorDesc];
+    NSLog(@"%@schedule", schedule);
 }
 
 #pragma mark - Table view data source
@@ -107,6 +126,11 @@
     if ([segue.identifier isEqualToString:@"Show Schedule"]) {
         UITableViewCell *cell = sender;
         [[segue.destinationViewController navigationItem] setTitle:cell.textLabel.text];
+        
+//        [segue.destinationViewController setScheduleForFirstWeek:[schedule objectForKey:cell.textLabel.text][0]];
+//        [segue.destinationViewController setScheduleForSecondWeek:[schedule objectForKey:cell.textLabel.text][1]];
+        [segue.destinationViewController setScheduleForFirstWeek:[schedule objectForKey:@"СП-21"][0]];
+        [segue.destinationViewController setScheduleForSecondWeek:[schedule objectForKey:@"СП-21"][1]];
     }
 }
 
