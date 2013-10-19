@@ -46,7 +46,8 @@
 
 - (void)loadScheduleFromFile
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"schedules" ofType:@"plist"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"schedule" ofType:@"plist"];
+
     NSData *data = [NSData dataWithContentsOfFile:path];
     NSPropertyListFormat format;
     NSString *errorDesc = nil;
@@ -55,7 +56,7 @@
                                              mutabilityOption:NSPropertyListMutableContainersAndLeaves
                                              format:&format
                                              errorDescription:&errorDesc];
-    NSLog(@"%@schedule", schedule);
+    NSLog(@"%@", path);
 }
 
 #pragma mark - Table view data source
@@ -127,10 +128,10 @@
         UITableViewCell *cell = sender;
         [[segue.destinationViewController navigationItem] setTitle:cell.textLabel.text];
         
-//        [segue.destinationViewController setScheduleForFirstWeek:[schedule objectForKey:cell.textLabel.text][0]];
-//        [segue.destinationViewController setScheduleForSecondWeek:[schedule objectForKey:cell.textLabel.text][1]];
-        [segue.destinationViewController setScheduleForFirstWeek:[schedule objectForKey:@"СП-21"][0]];
-        [segue.destinationViewController setScheduleForSecondWeek:[schedule objectForKey:@"СП-21"][1]];
+        [segue.destinationViewController setScheduleForFirstWeek:[schedule objectForKey:cell.textLabel.text][0]];
+        [segue.destinationViewController setScheduleForSecondWeek:[schedule objectForKey:cell.textLabel.text][1]];
+//        [segue.destinationViewController setScheduleForFirstWeek:[schedule objectForKey:@"СП-21"][0]];
+//        [segue.destinationViewController setScheduleForSecondWeek:[schedule objectForKey:@"СП-21"][1]];
     }
 }
 

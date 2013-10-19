@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		32335D141812C67F00A122D2 /* schedule.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32335D161812C67F00A122D2 /* schedule.plist */; };
+		3210595F1812FACA00149324 /* schedule.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3210595E1812FACA00149324 /* schedule.plist */; };
 		32810D4717E7503600FF45C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32810D4617E7503600FF45C8 /* Foundation.framework */; };
 		32810D4917E7503600FF45C8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32810D4817E7503600FF45C8 /* CoreGraphics.framework */; };
 		32810D4B17E7503600FF45C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32810D4A17E7503600FF45C8 /* UIKit.framework */; };
@@ -51,7 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		32335D151812C67F00A122D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/schedule.plist; sourceTree = "<group>"; };
+		3210595D1812FA9B00149324 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3210595E1812FACA00149324 /* schedule.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = schedule.plist; sourceTree = "<group>"; };
 		32810D4317E7503600FF45C8 /* TNTU App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TNTU App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32810D4617E7503600FF45C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		32810D4817E7503600FF45C8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,7 +63,6 @@
 		32810D5417E7503600FF45C8 /* TNTU App-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TNTU App-Prefix.pch"; sourceTree = "<group>"; };
 		32810D5517E7503600FF45C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		32810D5617E7503600FF45C8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		32810D5917E7503600FF45C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		32810D5E17E7503600FF45C8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		32810D6417E7503600FF45C8 /* TNTU AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TNTU AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32810D6517E7503600FF45C8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -123,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				32810D4C17E7503600FF45C8 /* TNTU App */,
+				3210595E1812FACA00149324 /* schedule.plist */,
 				32810D6B17E7503600FF45C8 /* TNTU AppTests */,
 				32810D4517E7503600FF45C8 /* Frameworks */,
 				32810D4417E7503600FF45C8 /* Products */,
@@ -163,7 +164,6 @@
 				3293771C180EEDA000D8172D /* Media.xcassets */,
 				32810D8317E7555E00FF45C8 /* Artwork */,
 				32810D4D17E7503600FF45C8 /* Supporting Files */,
-				32335D161812C67F00A122D2 /* schedule.plist */,
 			);
 			path = "TNTU App";
 			sourceTree = "<group>";
@@ -332,7 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3293771D180EEDA000D8172D /* Media.xcassets in Resources */,
-				32335D141812C67F00A122D2 /* schedule.plist in Resources */,
+				3210595F1812FACA00149324 /* schedule.plist in Resources */,
 				32877363180D6CB500693E24 /* placeholder.png in Resources */,
 				32810D5F17E7503600FF45C8 /* Images.xcassets in Resources */,
 				32810D5117E7503600FF45C8 /* InfoPlist.strings in Resources */,
@@ -394,14 +394,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		32335D161812C67F00A122D2 /* schedule.plist */ = {
-			isa = PBXVariantGroup;
-			children = (
-				32335D151812C67F00A122D2 /* Base */,
-			);
-			name = schedule.plist;
-			sourceTree = "<group>";
-		};
 		32810D4F17E7503600FF45C8 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -413,7 +405,7 @@
 		32810D5817E7503600FF45C8 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				32810D5917E7503600FF45C8 /* Base */,
+				3210595D1812FA9B00149324 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
