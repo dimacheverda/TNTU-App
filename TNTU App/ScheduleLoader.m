@@ -22,7 +22,7 @@
                                 mutabilityOption:NSPropertyListMutableContainersAndLeaves
                                 format:&format
                                 errorDescription:&errorDesc];
-    NSLog(@"%@", schedule);
+//    NSLog(@"%@", schedule);
     return schedule;
 }
 
