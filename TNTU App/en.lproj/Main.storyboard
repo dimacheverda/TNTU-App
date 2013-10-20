@@ -443,11 +443,11 @@
                     <navigationItem key="navigationItem" id="lbv-ib-V8A">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="lvB-EI-WJp">
-                            <rect key="frame" x="96" y="7" width="128" height="30"/>
+                            <rect key="frame" x="62" y="7" width="185" height="31"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
-                                <segment title="First"/>
-                                <segment title="Second"/>
+                                <segment title="1-й тиждень"/>
+                                <segment title="2-й тиждень"/>
                             </segments>
                             <connections>
                                 <action selector="segmentedControlValueChanged" destination="kxN-3a-UhD" eventType="valueChanged" id="Sm7-G0-9yh"/>

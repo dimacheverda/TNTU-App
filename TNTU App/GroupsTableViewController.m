@@ -8,6 +8,7 @@
 
 #import "GroupsTableViewController.h"
 #import "ScheduleTableViewController.h"
+#import "ScheduleLoader.h"
 
 @interface GroupsTableViewController ()
 {
@@ -31,32 +32,12 @@
     
     self.allGroups = [NSArray arrayWithObjects:fis1, fis2, fis3, fis4, nil];
     
-    [self loadScheduleFromFile];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    schedule = [ScheduleLoader loadScheduleFromMainBundle];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
-}
-
-- (void)loadScheduleFromFile
-{
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"schedule" ofType:@"plist"];
-
-    NSData *data = [NSData dataWithContentsOfFile:path];
-    NSPropertyListFormat format;
-    NSString *errorDesc = nil;
-    schedule =(NSDictionary *)[NSPropertyListSerialization
-                                             propertyListFromData:data
-                                             mutabilityOption:NSPropertyListMutableContainersAndLeaves
-                                             format:&format
-                                             errorDescription:&errorDesc];
-    NSLog(@"%@", path);
 }
 
 #pragma mark - Table view data source

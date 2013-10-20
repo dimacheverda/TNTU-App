@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3210595F1812FACA00149324 /* schedule.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3210595E1812FACA00149324 /* schedule.plist */; };
+		3210596218131E2300149324 /* ScheduleLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3210596118131E2300149324 /* ScheduleLoader.m */; };
 		32810D4717E7503600FF45C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32810D4617E7503600FF45C8 /* Foundation.framework */; };
 		32810D4917E7503600FF45C8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32810D4817E7503600FF45C8 /* CoreGraphics.framework */; };
 		32810D4B17E7503600FF45C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32810D4A17E7503600FF45C8 /* UIKit.framework */; };
@@ -53,6 +54,8 @@
 /* Begin PBXFileReference section */
 		3210595D1812FA9B00149324 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3210595E1812FACA00149324 /* schedule.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = schedule.plist; sourceTree = "<group>"; };
+		3210596018131E2300149324 /* ScheduleLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleLoader.h; sourceTree = "<group>"; };
+		3210596118131E2300149324 /* ScheduleLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleLoader.m; sourceTree = "<group>"; };
 		32810D4317E7503600FF45C8 /* TNTU App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TNTU App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32810D4617E7503600FF45C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		32810D4817E7503600FF45C8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -229,6 +232,8 @@
 				32C1EA4817EB3A81000ED75A /* ScheduleSingleCell.m */,
 				32821A73180B38A500F07112 /* PopoverTableViewController.h */,
 				32821A74180B38A500F07112 /* PopoverTableViewController.m */,
+				3210596018131E2300149324 /* ScheduleLoader.h */,
+				3210596118131E2300149324 /* ScheduleLoader.m */,
 			);
 			name = "Schedule Tab";
 			sourceTree = "<group>";
@@ -360,6 +365,7 @@
 				32810D9817E75FBD00FF45C8 /* InfoSecondaryTableViewController.m in Sources */,
 				32C1EA4517EB3468000ED75A /* ScheduleTableViewController.m in Sources */,
 				32821A70180B362900F07112 /* WYPopoverController.m in Sources */,
+				3210596218131E2300149324 /* ScheduleLoader.m in Sources */,
 				32810D5317E7503600FF45C8 /* main.m in Sources */,
 				3287735D180D6A6000693E24 /* NewsTableViewCell.m in Sources */,
 				32810D7D17E7521C00FF45C8 /* InfoMainTableViewController.m in Sources */,
