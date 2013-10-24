@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ScheduleLoader : NSObject
+@interface TntuKit : NSObject
 
 + (NSDictionary *)loadScheduleFromMainBundle;
 

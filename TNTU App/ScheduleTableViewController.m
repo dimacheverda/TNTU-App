@@ -8,7 +8,6 @@
 
 #import "ScheduleTableViewController.h"
 #import "ScheduleSingleCell.h"
-//#import "ScheduleDoubleCell.h"
 #import "PopoverTableViewController.h"
 #import "WYPopoverController.h"
 #import "WYStoryboardPopoverSegue.h"

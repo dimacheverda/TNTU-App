@@ -8,7 +8,7 @@
 
 #import "GroupsTableViewController.h"
 #import "ScheduleTableViewController.h"
-#import "ScheduleLoader.h"
+#import "TntuKit.h"
 
 @interface GroupsTableViewController ()
 {
@@ -32,7 +32,7 @@
     
     self.allGroups = [NSArray arrayWithObjects:fis1, fis2, fis3, fis4, nil];
     
-    schedule = [ScheduleLoader loadScheduleFromMainBundle];
+    schedule = [TntuKit loadScheduleFromMainBundle];
 }
 
 - (void)viewWillAppear:(BOOL)animated
