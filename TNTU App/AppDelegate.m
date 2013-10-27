@@ -49,7 +49,6 @@
     tabBarItem2.selectedImage = [UIImage imageNamed:@"date_fill"];
     tabBarItem3.image = [UIImage imageNamed:@"recent_line"];
     tabBarItem3.selectedImage = [UIImage imageNamed:@"recent_fill"];
-    
     return YES;
 }
 

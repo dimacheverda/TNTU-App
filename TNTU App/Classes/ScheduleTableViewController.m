@@ -32,12 +32,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)scrollToCurrentWeekDayTableView:(UITableView *)tableView
@@ -56,14 +50,11 @@
     [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop
                              animated:NO];
     [tableView reloadData];
-//    NSLog(@"section:%d   row:%d", indexPath.section, indexPath.row);
-//    NSLog(@"Today is: %d day of the week", day+1);
 }
 
 - (IBAction)segmentedControlValueChanged
 {
     [self.tableView reloadData];
-//    [self scrollToCurrentWeekDayTableView:self.tableView];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -102,33 +93,23 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *SingleCellIdentifier = @"Single Cell";
-    
     NSDictionary *subject = nil;
-    UITableViewCell *cell = nil;
     
-    // checking which week schedule to load
+    // Checking which week schedule to load
     if (self.segmentedControl.selectedSegmentIndex == 0) {
         subject = [[[self.scheduleForFirstWeek objectAtIndex:indexPath.section] objectAtIndex:self.groupNumber] objectAtIndex:indexPath.row];
     } else
         subject = [[[self.scheduleForSecondWeek objectAtIndex:indexPath.section] objectAtIndex:self.groupNumber] objectAtIndex:indexPath.row];
     
-        ScheduleSingleCell *singleCell = [tableView dequeueReusableCellWithIdentifier:SingleCellIdentifier forIndexPath:indexPath];
-        
-        // filling data for single schedule cell
-        singleCell.startTimeLabel.text = [subject objectForKey:@"startTime"];
-        singleCell.endTimeLabel.text = [subject objectForKey:@"endTime"];
-        singleCell.classTypeLabel.text = [subject objectForKey:@"classType"];
-        singleCell.subjectNameLabel.text = [subject objectForKey:@"subjectName"];
-        singleCell.auditoryNumberLabel.text = [subject objectForKey:@"auditoryNumber"];
+    ScheduleSingleCell *cell = [tableView dequeueReusableCellWithIdentifier:SingleCellIdentifier forIndexPath:indexPath];
+    
+    // Filling data for single schedule cell
+    cell.startTimeLabel.text = [subject objectForKey:@"startTime"];
+    cell.endTimeLabel.text = [subject objectForKey:@"endTime"];
+    cell.classTypeLabel.text = [subject objectForKey:@"classType"];
+    cell.subjectNameLabel.text = [subject objectForKey:@"subjectName"];
+    cell.auditoryNumberLabel.text = [subject objectForKey:@"auditoryNumber"];
 
-        cell = singleCell;
-    
-    // vertical separator
-    CGRect frame = CGRectMake(60.0, 0.0, 1.0, cell.contentView.frame.size.height - 0.0);
-    UIView *verticalSeparator = [[UIView alloc] initWithFrame:frame];
-    verticalSeparator.backgroundColor = [UIColor lightGrayColor];
-    [cell.contentView addSubview:verticalSeparator];
-    
     return cell;
 }
 
@@ -148,13 +129,11 @@
 
 - (BOOL)popoverControllerShouldDismissPopover:(WYPopoverController *)aPopoverController
 {
-//    NSLog(@"should dismiss");
     return YES;
 }
 
 - (void)popoverControllerDidDismissPopover:(WYPopoverController *)aPopoverController
 {
-//    NSLog(@"did dismiss");
     popoverController.delegate = nil;
     popoverController = nil;
 }
@@ -163,19 +142,19 @@
 
 - (void)popoverTableViewController:(PopoverTableViewController *)controller didSelectGroupName:(NSString *)groupName
 {
-//    NSLog(@"group name: %@", groupName);
     [self.groupNameBarButtonItem setTitle:groupName];
+    
     if ([groupName isEqualToString:@"1 група"]) {
         self.groupNumber = 0;
     } else
         self.groupNumber = 1;
+    
     controller.delegate = nil;
     [popoverController dismissPopoverAnimated:YES];
     popoverController.delegate = nil;
     popoverController = nil;
     
     [self.tableView reloadData];
-//    [self scrollToCurrentWeekDayTableView:self.tableView];
 }
 
 @end

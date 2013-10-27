@@ -10,20 +10,13 @@
 
 @implementation ScheduleSingleCell
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+ - (void)drawRect:(CGRect)rect
 {
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        // Initialization code
-    }
-    return self;
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+    // Draw vertical separator
+    CGRect frame = CGRectMake(60.0, 0.0, 1.0, self.contentView.frame.size.height - 0.0);
+    UIView *verticalSeparator = [[UIView alloc] initWithFrame:frame];
+    verticalSeparator.backgroundColor = [UIColor lightGrayColor];
+    [self.contentView addSubview:verticalSeparator];
 }
 
 @end

@@ -111,8 +111,6 @@
         
         [segue.destinationViewController setScheduleForFirstWeek:[schedule objectForKey:cell.textLabel.text][0]];
         [segue.destinationViewController setScheduleForSecondWeek:[schedule objectForKey:cell.textLabel.text][1]];
-//        [segue.destinationViewController setScheduleForFirstWeek:[schedule objectForKey:@"СП-21"][0]];
-//        [segue.destinationViewController setScheduleForSecondWeek:[schedule objectForKey:@"СП-21"][1]];
     }
 }
 
