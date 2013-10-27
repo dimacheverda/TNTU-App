@@ -23,15 +23,15 @@
 
 @implementation ScheduleTableViewController
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
     [self segmentedControlValueChanged];
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
 }
 
 - (void)scrollToCurrentWeekDayTableView:(UITableView *)tableView

@@ -7,17 +7,14 @@
 //
 
 #import "AppDelegate.h"
+#import "UIColor+TNTUAdditions.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    //rgb(52, 152, 219) peter river
-    //rgb(236, 240, 241) clouds
-    
-    // nav bar text tint color
-    UIColor *backgroundColor = [UIColor colorWithRed:52.0/255.0 green:152.0/255.0 blue:219.0/255.0 alpha:1.0];      // Peter River
-    UIColor *textColor = [UIColor colorWithRed:236.0/255.0 green:240.0/255.0 blue:241.0/255.0 alpha:1.0];           // Clouds
+{    
+    UIColor *backgroundColor = [UIColor tntuLightBlueColor];
+    UIColor *textColor = [UIColor tntuLightGrayColor];
     
     [[UINavigationBar appearance] setTintColor:textColor];
     
