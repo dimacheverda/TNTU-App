@@ -26,12 +26,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.navigationItem setBackBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"Назад" style:UIBarButtonItemStylePlain target:nil action:nil]];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
     [self segmentedControlValueChanged];
+    [self scrollToCurrentWeekDayTableView:self.tableView];
 }
 
 - (void)scrollToCurrentWeekDayTableView:(UITableView *)tableView

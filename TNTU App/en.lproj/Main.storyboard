@@ -102,7 +102,7 @@
                                             <attributes>
                                                 <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <font key="NSFont" size="17" name="HelveticaNeue"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
