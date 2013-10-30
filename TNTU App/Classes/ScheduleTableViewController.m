@@ -49,8 +49,10 @@
     }
     day--;
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:day];
-    [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop
-                             animated:NO];
+    if (self.scheduleForFirstWeek && self.scheduleForSecondWeek) {
+        [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop
+                                 animated:NO];
+    }
     [tableView reloadData];
 }
 

@@ -319,6 +319,7 @@
 		32810D3B17E7503600FF45C8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = "";
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Dima;
 				TargetAttributes = {
