@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3210595F1812FACA00149324 /* schedule.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3210595E1812FACA00149324 /* schedule.plist */; };
 		3210596218131E2300149324 /* TntuKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 3210596118131E2300149324 /* TntuKit.m */; };
+		32637BC818258639005ED71E /* ArticleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32637BC718258639005ED71E /* ArticleTableViewController.m */; };
 		327FC8C1181D8FEA0085D605 /* UIColor+TNTUAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 327FC8C0181D8FEA0085D605 /* UIColor+TNTUAdditions.m */; };
 		32810D4717E7503600FF45C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32810D4617E7503600FF45C8 /* Foundation.framework */; };
 		32810D4917E7503600FF45C8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32810D4817E7503600FF45C8 /* CoreGraphics.framework */; };
@@ -27,17 +28,15 @@
 		32810D7E17E7521C00FF45C8 /* InfoMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D7C17E7521C00FF45C8 /* InfoMainTableViewController.m */; };
 		32810D9817E75FBD00FF45C8 /* InfoSecondaryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D9717E75FBD00FF45C8 /* InfoSecondaryTableViewController.m */; };
 		32810D9917E75FBD00FF45C8 /* InfoSecondaryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D9717E75FBD00FF45C8 /* InfoSecondaryTableViewController.m */; };
-		32810D9C17E78A3B00FF45C8 /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D9B17E78A3B00FF45C8 /* ArticleViewController.m */; };
-		32810D9D17E78A3B00FF45C8 /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D9B17E78A3B00FF45C8 /* ArticleViewController.m */; };
 		32810DA417E7A7F700FF45C8 /* GroupsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810DA317E7A7F700FF45C8 /* GroupsTableViewController.m */; };
 		32810DA517E7A7F700FF45C8 /* GroupsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810DA317E7A7F700FF45C8 /* GroupsTableViewController.m */; };
 		32821A70180B362900F07112 /* WYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32821A6D180B362900F07112 /* WYPopoverController.m */; };
 		32821A71180B362900F07112 /* WYStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 32821A6F180B362900F07112 /* WYStoryboardPopoverSegue.m */; };
 		32821A75180B38A500F07112 /* PopoverTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32821A74180B38A500F07112 /* PopoverTableViewController.m */; };
-		3287386B181EEB09007CE238 /* TntuDesignKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 3287386A181EEB09007CE238 /* TntuDesignKit.m */; };
 		32877359180D69F700693E24 /* NewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32877358180D69F700693E24 /* NewsTableViewController.m */; };
 		3287735D180D6A6000693E24 /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3287735C180D6A6000693E24 /* NewsTableViewCell.m */; };
 		32877363180D6CB500693E24 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 32877362180D6CB500693E24 /* placeholder.png */; };
+		328E7BB11821B9AC0001B3CD /* UIFont+TNTUAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 328E7BB01821B9AC0001B3CD /* UIFont+TNTUAdditions.m */; };
 		3293771D180EEDA000D8172D /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3293771C180EEDA000D8172D /* Media.xcassets */; };
 		3295A81818213B650034F065 /* ArticleTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3295A81718213B650034F065 /* ArticleTextView.m */; };
 		32C1EA4517EB3468000ED75A /* ScheduleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C1EA4417EB3468000ED75A /* ScheduleTableViewController.m */; };
@@ -59,8 +58,10 @@
 		3210595E1812FACA00149324 /* schedule.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = schedule.plist; sourceTree = "<group>"; };
 		3210596018131E2300149324 /* TntuKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TntuKit.h; path = Classes/TntuKit.h; sourceTree = "<group>"; };
 		3210596118131E2300149324 /* TntuKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TntuKit.m; path = Classes/TntuKit.m; sourceTree = "<group>"; };
-		327FC8BF181D8FEA0085D605 /* UIColor+TNTUAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+TNTUAdditions.h"; sourceTree = "<group>"; };
-		327FC8C0181D8FEA0085D605 /* UIColor+TNTUAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+TNTUAdditions.m"; sourceTree = "<group>"; };
+		32637BC618258639005ED71E /* ArticleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArticleTableViewController.h; path = Classes/ArticleTableViewController.h; sourceTree = "<group>"; };
+		32637BC718258639005ED71E /* ArticleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArticleTableViewController.m; path = Classes/ArticleTableViewController.m; sourceTree = "<group>"; };
+		327FC8BF181D8FEA0085D605 /* UIColor+TNTUAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+TNTUAdditions.h"; path = "Category/UIColor+TNTUAdditions.h"; sourceTree = "<group>"; };
+		327FC8C0181D8FEA0085D605 /* UIColor+TNTUAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+TNTUAdditions.m"; path = "Category/UIColor+TNTUAdditions.m"; sourceTree = "<group>"; };
 		32810D4317E7503600FF45C8 /* TNTU App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TNTU App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32810D4617E7503600FF45C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		32810D4817E7503600FF45C8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -81,8 +82,6 @@
 		32810D7C17E7521C00FF45C8 /* InfoMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InfoMainTableViewController.m; path = Classes/InfoMainTableViewController.m; sourceTree = "<group>"; };
 		32810D9617E75FBD00FF45C8 /* InfoSecondaryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InfoSecondaryTableViewController.h; path = Classes/InfoSecondaryTableViewController.h; sourceTree = "<group>"; };
 		32810D9717E75FBD00FF45C8 /* InfoSecondaryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InfoSecondaryTableViewController.m; path = Classes/InfoSecondaryTableViewController.m; sourceTree = "<group>"; };
-		32810D9A17E78A3B00FF45C8 /* ArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArticleViewController.h; path = Classes/ArticleViewController.h; sourceTree = "<group>"; };
-		32810D9B17E78A3B00FF45C8 /* ArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArticleViewController.m; path = Classes/ArticleViewController.m; sourceTree = "<group>"; };
 		32810DA217E7A7F700FF45C8 /* GroupsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GroupsTableViewController.h; path = Classes/GroupsTableViewController.h; sourceTree = "<group>"; };
 		32810DA317E7A7F700FF45C8 /* GroupsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GroupsTableViewController.m; path = Classes/GroupsTableViewController.m; sourceTree = "<group>"; };
 		32821A6C180B362900F07112 /* WYPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WYPopoverController.h; path = WYPopover/WYPopoverController.h; sourceTree = "<group>"; };
@@ -91,13 +90,13 @@
 		32821A6F180B362900F07112 /* WYStoryboardPopoverSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WYStoryboardPopoverSegue.m; path = WYPopover/WYStoryboardPopoverSegue.m; sourceTree = "<group>"; };
 		32821A73180B38A500F07112 /* PopoverTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PopoverTableViewController.h; path = Classes/PopoverTableViewController.h; sourceTree = "<group>"; };
 		32821A74180B38A500F07112 /* PopoverTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PopoverTableViewController.m; path = Classes/PopoverTableViewController.m; sourceTree = "<group>"; };
-		32873869181EEB09007CE238 /* TntuDesignKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TntuDesignKit.h; path = Classes/TntuDesignKit.h; sourceTree = "<group>"; };
-		3287386A181EEB09007CE238 /* TntuDesignKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TntuDesignKit.m; path = Classes/TntuDesignKit.m; sourceTree = "<group>"; };
 		32877357180D69F700693E24 /* NewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsTableViewController.h; path = Classes/NewsTableViewController.h; sourceTree = "<group>"; };
 		32877358180D69F700693E24 /* NewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsTableViewController.m; path = Classes/NewsTableViewController.m; sourceTree = "<group>"; };
 		3287735B180D6A6000693E24 /* NewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsTableViewCell.h; path = Classes/NewsTableViewCell.h; sourceTree = "<group>"; };
 		3287735C180D6A6000693E24 /* NewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsTableViewCell.m; path = Classes/NewsTableViewCell.m; sourceTree = "<group>"; };
 		32877362180D6CB500693E24 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		328E7BAF1821B9AC0001B3CD /* UIFont+TNTUAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIFont+TNTUAdditions.h"; path = "Category/UIFont+TNTUAdditions.h"; sourceTree = "<group>"; };
+		328E7BB01821B9AC0001B3CD /* UIFont+TNTUAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+TNTUAdditions.m"; path = "Category/UIFont+TNTUAdditions.m"; sourceTree = "<group>"; };
 		3293771C180EEDA000D8172D /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		3295A81618213B650034F065 /* ArticleTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArticleTextView.h; path = Classes/ArticleTextView.h; sourceTree = "<group>"; };
 		3295A81718213B650034F065 /* ArticleTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArticleTextView.m; path = Classes/ArticleTextView.m; sourceTree = "<group>"; };
@@ -131,6 +130,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32637BC918258D90005ED71E /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				327FC8BF181D8FEA0085D605 /* UIColor+TNTUAdditions.h */,
+				327FC8C0181D8FEA0085D605 /* UIColor+TNTUAdditions.m */,
+				328E7BAF1821B9AC0001B3CD /* UIFont+TNTUAdditions.h */,
+				328E7BB01821B9AC0001B3CD /* UIFont+TNTUAdditions.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		32810D3A17E7503600FF45C8 = {
 			isa = PBXGroup;
 			children = (
@@ -174,16 +184,11 @@
 				32810DA117E7A09700FF45C8 /* Schedule Tab */,
 				3287735A180D69FD00693E24 /* News Tab */,
 				32821A72180B362E00F07112 /* WYPopover */,
+				32637BC918258D90005ED71E /* Categories */,
 				32810D5E17E7503600FF45C8 /* Images.xcassets */,
 				3293771C180EEDA000D8172D /* Media.xcassets */,
 				32810D8317E7555E00FF45C8 /* Artwork */,
 				32810D4D17E7503600FF45C8 /* Supporting Files */,
-				327FC8BF181D8FEA0085D605 /* UIColor+TNTUAdditions.h */,
-				327FC8C0181D8FEA0085D605 /* UIColor+TNTUAdditions.m */,
-				32873869181EEB09007CE238 /* TntuDesignKit.h */,
-				3287386A181EEB09007CE238 /* TntuDesignKit.m */,
-				3295A81618213B650034F065 /* ArticleTextView.h */,
-				3295A81718213B650034F065 /* ArticleTextView.m */,
 			);
 			path = "TNTU App";
 			sourceTree = "<group>";
@@ -232,8 +237,10 @@
 				32810D7C17E7521C00FF45C8 /* InfoMainTableViewController.m */,
 				32810D9617E75FBD00FF45C8 /* InfoSecondaryTableViewController.h */,
 				32810D9717E75FBD00FF45C8 /* InfoSecondaryTableViewController.m */,
-				32810D9A17E78A3B00FF45C8 /* ArticleViewController.h */,
-				32810D9B17E78A3B00FF45C8 /* ArticleViewController.m */,
+				32637BC618258639005ED71E /* ArticleTableViewController.h */,
+				32637BC718258639005ED71E /* ArticleTableViewController.m */,
+				3295A81618213B650034F065 /* ArticleTextView.h */,
+				3295A81718213B650034F065 /* ArticleTextView.m */,
 			);
 			name = "Info Tab";
 			sourceTree = "<group>";
@@ -383,15 +390,15 @@
 				32C1EA4517EB3468000ED75A /* ScheduleTableViewController.m in Sources */,
 				32821A70180B362900F07112 /* WYPopoverController.m in Sources */,
 				3210596218131E2300149324 /* TntuKit.m in Sources */,
-				3287386B181EEB09007CE238 /* TntuDesignKit.m in Sources */,
 				32810D5317E7503600FF45C8 /* main.m in Sources */,
+				32637BC818258639005ED71E /* ArticleTableViewController.m in Sources */,
 				3287735D180D6A6000693E24 /* NewsTableViewCell.m in Sources */,
 				32810D7D17E7521C00FF45C8 /* InfoMainTableViewController.m in Sources */,
 				32810DA417E7A7F700FF45C8 /* GroupsTableViewController.m in Sources */,
 				32877359180D69F700693E24 /* NewsTableViewController.m in Sources */,
 				32C1EA4917EB3A81000ED75A /* ScheduleSingleCell.m in Sources */,
 				3295A81818213B650034F065 /* ArticleTextView.m in Sources */,
-				32810D9C17E78A3B00FF45C8 /* ArticleViewController.m in Sources */,
+				328E7BB11821B9AC0001B3CD /* UIFont+TNTUAdditions.m in Sources */,
 				32821A71180B362900F07112 /* WYStoryboardPopoverSegue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,7 +407,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32810D9D17E78A3B00FF45C8 /* ArticleViewController.m in Sources */,
 				32810D9917E75FBD00FF45C8 /* InfoSecondaryTableViewController.m in Sources */,
 				32810D7217E7503600FF45C8 /* TNTU_AppTests.m in Sources */,
 				32810D7E17E7521C00FF45C8 /* InfoMainTableViewController.m in Sources */,

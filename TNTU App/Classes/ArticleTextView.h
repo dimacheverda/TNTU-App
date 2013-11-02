@@ -11,5 +11,6 @@
 @interface ArticleTextView : UITextView
 
 - (ArticleTextView *)initWithFrame:(CGRect)frame content:(NSString *)content;
+- (void)addImageViews:(NSArray *)imageViewsArray;
 
 @end

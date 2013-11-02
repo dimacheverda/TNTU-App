@@ -12,6 +12,7 @@
 
 + (UIColor *)tntuLightBlueColor;
 + (UIColor *)tntuLightGrayColor;
-+ (UIColor *)tntuArticleColor;
++ (UIColor *)tntuArticleTextColor;
++ (UIColor *)tntuArticleBackgroundColor;
 
 @end

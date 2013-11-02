@@ -20,9 +20,15 @@
     return [self colorWithRed:236.0/255.0 green:240.0/255.0 blue:241.0/255.0 alpha:1.0];
 }
 
-+ (UIColor *)tntuArticleColor
++ (UIColor *)tntuArticleTextColor
 {
     return [UIColor colorWithRed:38.0/255.0 green:38.0/255.0 blue:38.0/255.0 alpha:1.0];
+}
+
++ (UIColor *)tntuArticleBackgroundColor
+{
+//    return [UIColor colorWithRed:249.0/255.0 green:249.0/255.0 blue:249.0/255.0 alpha:1.0];
+    return [UIColor groupTableViewBackgroundColor];
 }
 
 @end
