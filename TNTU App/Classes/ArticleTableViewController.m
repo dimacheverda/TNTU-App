@@ -9,9 +9,11 @@
 #import "ArticleTableViewController.h"
 #import "ArticleTextView.h"
 
-@interface ArticleTableViewController ()
+@interface ArticleTableViewController () <UIGestureRecognizerDelegate>
 {
     NSString *content;
+    NSArray *imageNames;
+    NSMutableArray *imageViewsArray;
 }
 
 @property (strong, nonatomic) ArticleTextView *textView;
@@ -20,6 +22,8 @@
 @end
 
 @implementation ArticleTableViewController
+
+#pragma mark - View Controller Lifecycle
 
 - (void)viewDidLoad
 {
@@ -32,11 +36,22 @@
     [self.footerView addSubview:self.textView];
     [self.tableView addSubview:self.footerView];
     
-    UIImageView *imageView1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"placeholder"]];
-    UIImageView *imageView2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"placeholder"]];
-    UIImageView *imageView3 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"placeholder"]];
-    UIImageView *imageView4 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"placeholder"]];
-    [self.textView addImageViews:@[imageView1, imageView2, imageView3, imageView4]];
+    
+    // Initialasing imageViewsArray and adding TapGestureRecognizer
+    imageNames = [NSArray arrayWithObjects:@"placeholder", @"placeholder", @"placeholder", @"placeholder", nil];
+    imageViewsArray = [NSMutableArray new];
+    for (NSString *imageName in imageNames) {
+        UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];
+        [imageView setUserInteractionEnabled:YES];
+        UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc]
+                                             initWithTarget:self
+                                             action:@selector(actionHandleTapOnImageView:)];
+        [singleTap setNumberOfTapsRequired:1];
+        [imageView addGestureRecognizer:singleTap];
+        [imageViewsArray addObject:imageView];
+    }
+    
+    [self.textView addImageViews:imageViewsArray];
 }
 
 - (void)viewWillLayoutSubviews
@@ -53,6 +68,13 @@
                                        self.textView.contentSize.height);
     self.tableView.contentSize = CGSizeMake(320.0,
                                             self.textView.contentSize.height);
+}
+
+#pragma mark
+
+- (void)actionHandleTapOnImageView:(UITapGestureRecognizer *)sender
+{
+    NSLog(@"actionHandleTapOnImageView:  %f", sender.view.frame.origin.y);
 }
 
 #pragma mark - Table view data source

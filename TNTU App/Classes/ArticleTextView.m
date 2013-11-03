@@ -10,6 +10,10 @@
 #import "UIColor+TNTUAdditions.h"
 #import "UIFont+TNTUAdditions.h"
 
+@interface ArticleTextView () <UIGestureRecognizerDelegate>
+
+@end
+
 @implementation ArticleTextView
 {
     NSTextStorage *textStorage;
@@ -71,12 +75,17 @@ static CGFloat kImageViewPadding = 30*14;
 {
     NSInteger currentImageView = 0;
     NSMutableArray *exclusionPaths = [NSMutableArray new];
+    
     for (UIImageView *imageView in imageViewsArray) {
+        
+        // Layout Image View
         CGRect frame = CGRectMake((currentImageView % 2) * 160.0,
                                   kImageViewPadding * currentImageView + kImageViewHeight,
                                   kImageViewWidth,
                                   kImageViewHeight);
         imageView.frame = frame;
+        
+        // Adding to exclusion paths
         UIBezierPath* exclusionPath = [UIBezierPath bezierPathWithRect:CGRectMake(imageView.frame.origin.x - 3.0,
                                                                                   imageView.frame.origin.y - 10.0,
                                                                                   imageView.frame.size.width + 3.0,
