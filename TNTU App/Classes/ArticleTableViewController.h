@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ArticleTableViewController : UITableViewController
+@interface ArticleTableViewController : UITableViewController <UIViewControllerTransitioningDelegate>
 
 @end

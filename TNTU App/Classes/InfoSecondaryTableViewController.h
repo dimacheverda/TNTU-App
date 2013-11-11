@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InfoSecondaryTableViewController : UITableViewController
+@interface InfoSecondaryTableViewController : UITableViewController <UIViewControllerTransitioningDelegate>
 
 @property (strong, nonatomic) NSArray *contentArray;
 

@@ -8,6 +8,9 @@
 
 #import "InfoSecondaryTableViewController.h"
 #import "ArticleTextView.h"
+#import "PhotoViewController.h"
+#import "ShowPhotoTransition.h"
+#import "DismissPhotoTransition.h"
 
 @interface InfoSecondaryTableViewController ()
 {
@@ -46,7 +49,7 @@
         [imageView setUserInteractionEnabled:YES];
         UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc]
                                              initWithTarget:self
-                                             action:@selector(actionHandleTapOnImageView:)];
+                                             action:@selector(imageViewTapped:)];
         [singleTap setNumberOfTapsRequired:1];
         [imageView addGestureRecognizer:singleTap];
         [imageViewsArray addObject:imageView];
@@ -75,9 +78,35 @@
 
 #pragma mark
 
-- (void)actionHandleTapOnImageView:(UITapGestureRecognizer *)sender
+- (void)imageViewTapped:(UITapGestureRecognizer *)sender
 {
     NSLog(@"actionHandleTapOnImageView:  %f", sender.view.frame.origin.y);
+    PhotoViewController *photoVC = [PhotoViewController new];
+    if ([sender.view isKindOfClass:[UIImageView class]]) {
+        UIImageView *imageView = [UIImageView new];
+        UIImageView *imageView1 = (UIImageView *)sender.view;
+        imageView.image = imageView1.image;
+        [photoVC setImageview:imageView];
+    }
+    photoVC.modalPresentationStyle = UIModalPresentationCustom;
+    photoVC.transitioningDelegate = self;
+    [self presentViewController:photoVC animated:YES completion:nil];
+}
+
+#pragma mark - View Controller Transitioning Delegate
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
+                                                                  presentingController:(UIViewController *)presenting
+                                                                      sourceController:(UIViewController *)source
+{
+    ShowPhotoTransition *showPhotoTransition = [ShowPhotoTransition new];
+    return showPhotoTransition;
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
+{
+    DismissPhotoTransition *transition = [DismissPhotoTransition new];
+    return transition;
 }
 
 #pragma mark - Table View Data Source

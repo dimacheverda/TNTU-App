@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3210595F1812FACA00149324 /* schedule.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3210595E1812FACA00149324 /* schedule.plist */; };
 		3210596218131E2300149324 /* TntuKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 3210596118131E2300149324 /* TntuKit.m */; };
+		3242795F182706E100E266BB /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3242795E182706E100E266BB /* PhotoViewController.m */; };
+		32427962182708B400E266BB /* ShowPhotoTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 32427961182708B400E266BB /* ShowPhotoTransition.m */; };
 		32637BC818258639005ED71E /* ArticleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32637BC718258639005ED71E /* ArticleTableViewController.m */; };
 		327FC8C1181D8FEA0085D605 /* UIColor+TNTUAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 327FC8C0181D8FEA0085D605 /* UIColor+TNTUAdditions.m */; };
 		32810D4717E7503600FF45C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32810D4617E7503600FF45C8 /* Foundation.framework */; };
@@ -41,6 +43,7 @@
 		3295A81818213B650034F065 /* ArticleTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3295A81718213B650034F065 /* ArticleTextView.m */; };
 		32C1EA4517EB3468000ED75A /* ScheduleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C1EA4417EB3468000ED75A /* ScheduleTableViewController.m */; };
 		32C1EA4917EB3A81000ED75A /* ScheduleSingleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C1EA4817EB3A81000ED75A /* ScheduleSingleCell.m */; };
+		32CBAA711829366600C9CB1A /* DismissPhotoTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CBAA701829366600C9CB1A /* DismissPhotoTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,10 @@
 		3210595E1812FACA00149324 /* schedule.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = schedule.plist; sourceTree = "<group>"; };
 		3210596018131E2300149324 /* TntuKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TntuKit.h; path = Classes/TntuKit.h; sourceTree = "<group>"; };
 		3210596118131E2300149324 /* TntuKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TntuKit.m; path = Classes/TntuKit.m; sourceTree = "<group>"; };
+		3242795D182706E100E266BB /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoViewController.h; path = Classes/PhotoViewController.h; sourceTree = "<group>"; };
+		3242795E182706E100E266BB /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoViewController.m; path = Classes/PhotoViewController.m; sourceTree = "<group>"; };
+		32427960182708B400E266BB /* ShowPhotoTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowPhotoTransition.h; path = Classes/ShowPhotoTransition.h; sourceTree = "<group>"; };
+		32427961182708B400E266BB /* ShowPhotoTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShowPhotoTransition.m; path = Classes/ShowPhotoTransition.m; sourceTree = "<group>"; };
 		32637BC618258639005ED71E /* ArticleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArticleTableViewController.h; path = Classes/ArticleTableViewController.h; sourceTree = "<group>"; };
 		32637BC718258639005ED71E /* ArticleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArticleTableViewController.m; path = Classes/ArticleTableViewController.m; sourceTree = "<group>"; };
 		327FC8BF181D8FEA0085D605 /* UIColor+TNTUAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+TNTUAdditions.h"; path = "Category/UIColor+TNTUAdditions.h"; sourceTree = "<group>"; };
@@ -104,6 +111,8 @@
 		32C1EA4417EB3468000ED75A /* ScheduleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScheduleTableViewController.m; path = Classes/ScheduleTableViewController.m; sourceTree = "<group>"; };
 		32C1EA4717EB3A81000ED75A /* ScheduleSingleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScheduleSingleCell.h; path = Classes/ScheduleSingleCell.h; sourceTree = "<group>"; };
 		32C1EA4817EB3A81000ED75A /* ScheduleSingleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScheduleSingleCell.m; path = Classes/ScheduleSingleCell.m; sourceTree = "<group>"; };
+		32CBAA6F1829366600C9CB1A /* DismissPhotoTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DismissPhotoTransition.h; path = Classes/DismissPhotoTransition.h; sourceTree = "<group>"; };
+		32CBAA701829366600C9CB1A /* DismissPhotoTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DismissPhotoTransition.m; path = Classes/DismissPhotoTransition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +250,12 @@
 				32637BC718258639005ED71E /* ArticleTableViewController.m */,
 				3295A81618213B650034F065 /* ArticleTextView.h */,
 				3295A81718213B650034F065 /* ArticleTextView.m */,
+				3242795D182706E100E266BB /* PhotoViewController.h */,
+				3242795E182706E100E266BB /* PhotoViewController.m */,
+				32427960182708B400E266BB /* ShowPhotoTransition.h */,
+				32427961182708B400E266BB /* ShowPhotoTransition.m */,
+				32CBAA6F1829366600C9CB1A /* DismissPhotoTransition.h */,
+				32CBAA701829366600C9CB1A /* DismissPhotoTransition.m */,
 			);
 			name = "Info Tab";
 			sourceTree = "<group>";
@@ -383,9 +398,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32427962182708B400E266BB /* ShowPhotoTransition.m in Sources */,
 				327FC8C1181D8FEA0085D605 /* UIColor+TNTUAdditions.m in Sources */,
 				32810D5717E7503600FF45C8 /* AppDelegate.m in Sources */,
 				32821A75180B38A500F07112 /* PopoverTableViewController.m in Sources */,
+				32CBAA711829366600C9CB1A /* DismissPhotoTransition.m in Sources */,
 				32810D9817E75FBD00FF45C8 /* InfoSecondaryTableViewController.m in Sources */,
 				32C1EA4517EB3468000ED75A /* ScheduleTableViewController.m in Sources */,
 				32821A70180B362900F07112 /* WYPopoverController.m in Sources */,
@@ -398,6 +415,7 @@
 				32877359180D69F700693E24 /* NewsTableViewController.m in Sources */,
 				32C1EA4917EB3A81000ED75A /* ScheduleSingleCell.m in Sources */,
 				3295A81818213B650034F065 /* ArticleTextView.m in Sources */,
+				3242795F182706E100E266BB /* PhotoViewController.m in Sources */,
 				328E7BB11821B9AC0001B3CD /* UIFont+TNTUAdditions.m in Sources */,
 				32821A71180B362900F07112 /* WYStoryboardPopoverSegue.m in Sources */,
 			);
