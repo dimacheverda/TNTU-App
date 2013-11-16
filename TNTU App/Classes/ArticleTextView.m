@@ -10,6 +10,7 @@
 #import "UIColor+TNTUAdditions.h"
 #import "UIFont+TNTUAdditions.h"
 
+
 @interface ArticleTextView () <UIGestureRecognizerDelegate>
 
 @end
@@ -52,10 +53,10 @@
     textContainer = [[NSTextContainer alloc] init];
     [textStorage addLayoutManager:layoutManager];
     [layoutManager addTextContainer:textContainer];
-    
+
     self = [[ArticleTextView alloc] initWithFrame:frame textContainer:textContainer];
     self.font = [UIFont fontForArticleContent];
-    [self setTextContainerInset:UIEdgeInsetsMake(8.0, 2.0, 8.0, 2.0)];
+    [self setTextContainerInset:UIEdgeInsetsMake(8.0, 8.0, 8.0, 5.0)];
     [self setTextAlignment:NSTextAlignmentLeft];
     [self setSelectable:NO];
     [self setEditable:NO];

@@ -153,17 +153,8 @@
                     <view key="view" contentMode="scaleToFill" id="5Pm-6u-wp2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="date_line" translatesAutoresizingMaskIntoConstraints="NO" id="XiS-2T-ALW">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <outlet property="imageView" destination="XiS-2T-ALW" id="Zs0-Vx-I6z"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jh6-72-5Em" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -432,9 +423,6 @@
             <point key="canvasLocation" x="836" y="911"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="date_line" width="30" height="30"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

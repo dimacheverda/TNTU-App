@@ -39,6 +39,9 @@
 		3287735D180D6A6000693E24 /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3287735C180D6A6000693E24 /* NewsTableViewCell.m */; };
 		32877363180D6CB500693E24 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 32877362180D6CB500693E24 /* placeholder.png */; };
 		328E7BB11821B9AC0001B3CD /* UIFont+TNTUAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 328E7BB01821B9AC0001B3CD /* UIFont+TNTUAdditions.m */; };
+		3290DF94183827700076B7B4 /* MHFacebookImageViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3290DF90183827700076B7B4 /* MHFacebookImageViewer.m */; };
+		3290DF95183827700076B7B4 /* Done.png in Resources */ = {isa = PBXBuildFile; fileRef = 3290DF92183827700076B7B4 /* Done.png */; };
+		3290DF96183827700076B7B4 /* Done@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3290DF93183827700076B7B4 /* Done@2x.png */; };
 		3293771D180EEDA000D8172D /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3293771C180EEDA000D8172D /* Media.xcassets */; };
 		3295A81818213B650034F065 /* ArticleTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3295A81718213B650034F065 /* ArticleTextView.m */; };
 		32C1EA4517EB3468000ED75A /* ScheduleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C1EA4417EB3468000ED75A /* ScheduleTableViewController.m */; };
@@ -104,6 +107,10 @@
 		32877362180D6CB500693E24 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		328E7BAF1821B9AC0001B3CD /* UIFont+TNTUAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIFont+TNTUAdditions.h"; path = "Category/UIFont+TNTUAdditions.h"; sourceTree = "<group>"; };
 		328E7BB01821B9AC0001B3CD /* UIFont+TNTUAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+TNTUAdditions.m"; path = "Category/UIFont+TNTUAdditions.m"; sourceTree = "<group>"; };
+		3290DF8F183827700076B7B4 /* MHFacebookImageViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHFacebookImageViewer.h; sourceTree = "<group>"; };
+		3290DF90183827700076B7B4 /* MHFacebookImageViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHFacebookImageViewer.m; sourceTree = "<group>"; };
+		3290DF92183827700076B7B4 /* Done.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Done.png; sourceTree = "<group>"; };
+		3290DF93183827700076B7B4 /* Done@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Done@2x.png"; sourceTree = "<group>"; };
 		3293771C180EEDA000D8172D /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		3295A81618213B650034F065 /* ArticleTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArticleTextView.h; path = Classes/ArticleTextView.h; sourceTree = "<group>"; };
 		3295A81718213B650034F065 /* ArticleTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArticleTextView.m; path = Classes/ArticleTextView.m; sourceTree = "<group>"; };
@@ -193,6 +200,7 @@
 				32810DA117E7A09700FF45C8 /* Schedule Tab */,
 				3287735A180D69FD00693E24 /* News Tab */,
 				32821A72180B362E00F07112 /* WYPopover */,
+				3290DF8E183827700076B7B4 /* MHFBImageViewController */,
 				32637BC918258D90005ED71E /* Categories */,
 				32810D5E17E7503600FF45C8 /* Images.xcassets */,
 				3293771C180EEDA000D8172D /* Media.xcassets */,
@@ -297,6 +305,25 @@
 			name = "News Tab";
 			sourceTree = "<group>";
 		};
+		3290DF8E183827700076B7B4 /* MHFBImageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3290DF8F183827700076B7B4 /* MHFacebookImageViewer.h */,
+				3290DF90183827700076B7B4 /* MHFacebookImageViewer.m */,
+				3290DF91183827700076B7B4 /* Resources */,
+			);
+			path = MHFBImageViewController;
+			sourceTree = "<group>";
+		};
+		3290DF91183827700076B7B4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3290DF92183827700076B7B4 /* Done.png */,
+				3290DF93183827700076B7B4 /* Done@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -374,11 +401,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3290DF95183827700076B7B4 /* Done.png in Resources */,
 				3293771D180EEDA000D8172D /* Media.xcassets in Resources */,
 				3210595F1812FACA00149324 /* schedule.plist in Resources */,
 				32877363180D6CB500693E24 /* placeholder.png in Resources */,
 				32810D5F17E7503600FF45C8 /* Images.xcassets in Resources */,
 				32810D5117E7503600FF45C8 /* InfoPlist.strings in Resources */,
+				3290DF96183827700076B7B4 /* Done@2x.png in Resources */,
 				32810D5A17E7503600FF45C8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +438,7 @@
 				3210596218131E2300149324 /* TntuKit.m in Sources */,
 				32810D5317E7503600FF45C8 /* main.m in Sources */,
 				32637BC818258639005ED71E /* ArticleTableViewController.m in Sources */,
+				3290DF94183827700076B7B4 /* MHFacebookImageViewer.m in Sources */,
 				3287735D180D6A6000693E24 /* NewsTableViewCell.m in Sources */,
 				32810D7D17E7521C00FF45C8 /* InfoMainTableViewController.m in Sources */,
 				32810DA417E7A7F700FF45C8 /* GroupsTableViewController.m in Sources */,

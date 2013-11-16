@@ -86,7 +86,7 @@
         UIImageView *imageView = [UIImageView new];
         UIImageView *imageView1 = (UIImageView *)sender.view;
         imageView.image = imageView1.image;
-        [photoVC setImageview:imageView];
+        [photoVC setPhoto:imageView.image];
     }
     photoVC.modalPresentationStyle = UIModalPresentationCustom;
     photoVC.transitioningDelegate = self;

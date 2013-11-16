@@ -10,7 +10,7 @@
 
 @interface PhotoViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UIImageView *imageView;
-@property (strong, nonatomic) UIImageView *imageview;
+@property (strong, nonatomic) UIImageView *photoView;
+@property (strong, nonatomic) UIImage *photo;
 
 @end
