@@ -77,17 +77,17 @@
 
 - (void)imageViewTapped:(UITapGestureRecognizer *)sender
 {
-    NSLog(@"actionHandleTapOnImageView:  %f", sender.view.frame.origin.y);
-    PhotoViewController *photoVC = [PhotoViewController new];
-    if ([sender.view isKindOfClass:[UIImageView class]]) {
-        UIImageView *imageView = [UIImageView new];
-        UIImageView *imageView1 = (UIImageView *)sender.view;
-        imageView.image = imageView1.image;
-        [photoVC setPhoto:imageView.image];
-    }
-    photoVC.modalPresentationStyle = UIModalPresentationCustom;
-    photoVC.transitioningDelegate = self;
-    [self presentViewController:photoVC animated:YES completion:nil];
+//    NSLog(@"actionHandleTapOnImageView:  %f", sender.view.frame.origin.y);
+//    PhotoViewController *photoVC = [PhotoViewController new];
+//    if ([sender.view isKindOfClass:[UIImageView class]]) {
+//        UIImageView *imageView = [UIImageView new];
+//        UIImageView *imageView1 = (UIImageView *)sender.view;
+//        imageView.image = imageView1.image;
+//        [photoVC setPhoto:imageView.image];
+//    }
+//    photoVC.modalPresentationStyle = UIModalPresentationCustom;
+//    photoVC.transitioningDelegate = self;
+//    [self presentViewController:photoVC animated:YES completion:nil];
 }
 
 #pragma mark - View Controller Transitioning Delegate

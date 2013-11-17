@@ -9,7 +9,7 @@
 #import "ArticleTextView.h"
 #import "UIColor+TNTUAdditions.h"
 #import "UIFont+TNTUAdditions.h"
-
+#import "MHFacebookImageViewer.h"
 
 @interface ArticleTextView () <UIGestureRecognizerDelegate>
 
@@ -85,7 +85,7 @@ static CGFloat kImageViewPadding = 30*14;
                                   kImageViewWidth,
                                   kImageViewHeight);
         imageView.frame = frame;
-        
+        [imageView setupImageViewer];
         // Adding to exclusion paths
         UIBezierPath* exclusionPath = [UIBezierPath bezierPathWithRect:CGRectMake(imageView.frame.origin.x - 3.0,
                                                                                   imageView.frame.origin.y - 10.0,
