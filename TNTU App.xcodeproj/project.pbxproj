@@ -32,6 +32,8 @@
 		32810D9917E75FBD00FF45C8 /* InfoSecondaryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810D9717E75FBD00FF45C8 /* InfoSecondaryTableViewController.m */; };
 		32810DA417E7A7F700FF45C8 /* GroupsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810DA317E7A7F700FF45C8 /* GroupsTableViewController.m */; };
 		32810DA517E7A7F700FF45C8 /* GroupsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32810DA317E7A7F700FF45C8 /* GroupsTableViewController.m */; };
+		3281ECD4183BB82B00EA41CA /* NewsTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3281ECD3183BB82B00EA41CA /* NewsTextView.m */; };
+		3281ECD7183BB85F00EA41CA /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3281ECD6183BB85F00EA41CA /* NewsViewController.m */; };
 		32821A70180B362900F07112 /* WYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32821A6D180B362900F07112 /* WYPopoverController.m */; };
 		32821A71180B362900F07112 /* WYStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 32821A6F180B362900F07112 /* WYStoryboardPopoverSegue.m */; };
 		32821A75180B38A500F07112 /* PopoverTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32821A74180B38A500F07112 /* PopoverTableViewController.m */; };
@@ -60,6 +62,7 @@
 		3290DFCD183828910076B7B4 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 3290DFBD183828910076B7B4 /* UIWebView+AFNetworking.m */; };
 		3293771D180EEDA000D8172D /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3293771C180EEDA000D8172D /* Media.xcassets */; };
 		3295A81818213B650034F065 /* ArticleTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3295A81718213B650034F065 /* ArticleTextView.m */; };
+		32A334AA1847969C00284483 /* EmptyNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A334A91847969C00284483 /* EmptyNewsCell.m */; };
 		32C1EA4517EB3468000ED75A /* ScheduleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C1EA4417EB3468000ED75A /* ScheduleTableViewController.m */; };
 		32C1EA4917EB3A81000ED75A /* ScheduleSingleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C1EA4817EB3A81000ED75A /* ScheduleSingleCell.m */; };
 		32CBAA711829366600C9CB1A /* DismissPhotoTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CBAA701829366600C9CB1A /* DismissPhotoTransition.m */; };
@@ -110,6 +113,10 @@
 		32810D9717E75FBD00FF45C8 /* InfoSecondaryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InfoSecondaryTableViewController.m; path = Classes/InfoSecondaryTableViewController.m; sourceTree = "<group>"; };
 		32810DA217E7A7F700FF45C8 /* GroupsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GroupsTableViewController.h; path = Classes/GroupsTableViewController.h; sourceTree = "<group>"; };
 		32810DA317E7A7F700FF45C8 /* GroupsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GroupsTableViewController.m; path = Classes/GroupsTableViewController.m; sourceTree = "<group>"; };
+		3281ECD2183BB82B00EA41CA /* NewsTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsTextView.h; path = Classes/NewsTextView.h; sourceTree = "<group>"; };
+		3281ECD3183BB82B00EA41CA /* NewsTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsTextView.m; path = Classes/NewsTextView.m; sourceTree = "<group>"; };
+		3281ECD5183BB85F00EA41CA /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsViewController.h; path = Classes/NewsViewController.h; sourceTree = "<group>"; };
+		3281ECD6183BB85F00EA41CA /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsViewController.m; path = Classes/NewsViewController.m; sourceTree = "<group>"; };
 		32821A6C180B362900F07112 /* WYPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WYPopoverController.h; path = WYPopover/WYPopoverController.h; sourceTree = "<group>"; };
 		32821A6D180B362900F07112 /* WYPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WYPopoverController.m; path = WYPopover/WYPopoverController.m; sourceTree = "<group>"; };
 		32821A6E180B362900F07112 /* WYStoryboardPopoverSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WYStoryboardPopoverSegue.h; path = WYPopover/WYStoryboardPopoverSegue.h; sourceTree = "<group>"; };
@@ -164,6 +171,8 @@
 		3293771C180EEDA000D8172D /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		3295A81618213B650034F065 /* ArticleTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArticleTextView.h; path = Classes/ArticleTextView.h; sourceTree = "<group>"; };
 		3295A81718213B650034F065 /* ArticleTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArticleTextView.m; path = Classes/ArticleTextView.m; sourceTree = "<group>"; };
+		32A334A81847969C00284483 /* EmptyNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmptyNewsCell.h; path = Classes/EmptyNewsCell.h; sourceTree = "<group>"; };
+		32A334A91847969C00284483 /* EmptyNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmptyNewsCell.m; path = Classes/EmptyNewsCell.m; sourceTree = "<group>"; };
 		32C1EA4317EB3468000ED75A /* ScheduleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScheduleTableViewController.h; path = Classes/ScheduleTableViewController.h; sourceTree = "<group>"; };
 		32C1EA4417EB3468000ED75A /* ScheduleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScheduleTableViewController.m; path = Classes/ScheduleTableViewController.m; sourceTree = "<group>"; };
 		32C1EA4717EB3A81000ED75A /* ScheduleSingleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScheduleSingleCell.h; path = Classes/ScheduleSingleCell.h; sourceTree = "<group>"; };
@@ -310,10 +319,7 @@
 				3295A81718213B650034F065 /* ArticleTextView.m */,
 				3242795D182706E100E266BB /* PhotoViewController.h */,
 				3242795E182706E100E266BB /* PhotoViewController.m */,
-				32427960182708B400E266BB /* ShowPhotoTransition.h */,
-				32427961182708B400E266BB /* ShowPhotoTransition.m */,
-				32CBAA6F1829366600C9CB1A /* DismissPhotoTransition.h */,
-				32CBAA701829366600C9CB1A /* DismissPhotoTransition.m */,
+				3281ECD8183BB9C300EA41CA /* Custom Transitions */,
 			);
 			name = "Info Tab";
 			sourceTree = "<group>";
@@ -331,6 +337,17 @@
 				32821A74180B38A500F07112 /* PopoverTableViewController.m */,
 			);
 			name = "Schedule Tab";
+			sourceTree = "<group>";
+		};
+		3281ECD8183BB9C300EA41CA /* Custom Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				32427960182708B400E266BB /* ShowPhotoTransition.h */,
+				32427961182708B400E266BB /* ShowPhotoTransition.m */,
+				32CBAA6F1829366600C9CB1A /* DismissPhotoTransition.h */,
+				32CBAA701829366600C9CB1A /* DismissPhotoTransition.m */,
+			);
+			name = "Custom Transitions";
 			sourceTree = "<group>";
 		};
 		32821A72180B362E00F07112 /* WYPopover */ = {
@@ -351,6 +368,12 @@
 				32877358180D69F700693E24 /* NewsTableViewController.m */,
 				3287735B180D6A6000693E24 /* NewsTableViewCell.h */,
 				3287735C180D6A6000693E24 /* NewsTableViewCell.m */,
+				3281ECD5183BB85F00EA41CA /* NewsViewController.h */,
+				3281ECD6183BB85F00EA41CA /* NewsViewController.m */,
+				3281ECD2183BB82B00EA41CA /* NewsTextView.h */,
+				3281ECD3183BB82B00EA41CA /* NewsTextView.m */,
+				32A334A81847969C00284483 /* EmptyNewsCell.h */,
+				32A334A91847969C00284483 /* EmptyNewsCell.m */,
 			);
 			name = "News Tab";
 			sourceTree = "<group>";
@@ -533,12 +556,14 @@
 				32810D5717E7503600FF45C8 /* AppDelegate.m in Sources */,
 				3290DFCC183828910076B7B4 /* UIProgressView+AFNetworking.m in Sources */,
 				32821A75180B38A500F07112 /* PopoverTableViewController.m in Sources */,
+				3281ECD7183BB85F00EA41CA /* NewsViewController.m in Sources */,
 				3290DFC3183828910076B7B4 /* AFURLConnectionOperation.m in Sources */,
 				32CBAA711829366600C9CB1A /* DismissPhotoTransition.m in Sources */,
 				32810D9817E75FBD00FF45C8 /* InfoSecondaryTableViewController.m in Sources */,
 				32C1EA4517EB3468000ED75A /* ScheduleTableViewController.m in Sources */,
 				32821A70180B362900F07112 /* WYPopoverController.m in Sources */,
 				3210596218131E2300149324 /* TntuKit.m in Sources */,
+				3281ECD4183BB82B00EA41CA /* NewsTextView.m in Sources */,
 				32810D5317E7503600FF45C8 /* main.m in Sources */,
 				3290DFC7183828910076B7B4 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				3290DFBE183828910076B7B4 /* AFHTTPRequestOperation.m in Sources */,
@@ -547,6 +572,7 @@
 				3290DFC9183828910076B7B4 /* UIAlertView+AFNetworking.m in Sources */,
 				3290DF94183827700076B7B4 /* MHFacebookImageViewer.m in Sources */,
 				3290DFC6183828910076B7B4 /* AFURLSessionManager.m in Sources */,
+				32A334AA1847969C00284483 /* EmptyNewsCell.m in Sources */,
 				3287735D180D6A6000693E24 /* NewsTableViewCell.m in Sources */,
 				3290DFBF183828910076B7B4 /* AFHTTPRequestOperationManager.m in Sources */,
 				3290DFC0183828910076B7B4 /* AFHTTPSessionManager.m in Sources */,
@@ -698,6 +724,7 @@
 				INFOPLIST_FILE = "TNTU App/TNTU App-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -712,6 +739,7 @@
 				INFOPLIST_FILE = "TNTU App/TNTU App-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

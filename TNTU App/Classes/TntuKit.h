@@ -11,5 +11,8 @@
 @interface TntuKit : NSObject
 
 + (NSDictionary *)loadScheduleFromMainBundle;
++ (NSMutableArray *)loadArrayFromDropboxFile:(NSString *)aFilename;
++ (UIImage *)loadImageFromDropboxFile:(NSString *)aFilename;
++ (NSMutableDictionary *)loadDictionaryFromDropboxFile:(NSString *)aFilename;
 
 @end
