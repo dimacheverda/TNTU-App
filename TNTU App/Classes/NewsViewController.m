@@ -8,62 +8,47 @@
 
 #import "NewsViewController.h"
 #import "NewsTextView.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface NewsViewController ()
 
 @property (strong, nonatomic) UIView *footerView;
 @property (strong, nonatomic) NewsTextView *textView;
-
 @property (strong, nonatomic) UILabel *titleLabel;
 
 @end
 
 @implementation NewsViewController
 {
-    NSString *content;
-    NSString *title;
-    NSArray *imageNames;
     NSMutableArray *imageViewsArray;
-}
-
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    title = @"Семінар професора Жака Фресара у Тернопільську національному технічному унверситеті імені Івана Пулюя";
-
-    content = @"    14 листопада у читальному залі Тернопільського національного технічного університету імені Івана Пулюя відбувся науковий семінар професора Жака Фресара (університет П’єра та Марії Кюрі, Париж, Франція) на тему 'Технології ядерно-магнітного резонансу: нові результати, перспективи застосування в промисловості, хімії, медицині'.\r\n\r\n     В ході візиту Жак Фресар зустрівся із ректором університету проф. Петром Яснієм, а також відвідав муніципалітет міста та здійснив ескурсію до старовинного Вишнівця. \r\n\r\n    Професор Жак Фресар уже вдруге завітав до ТНТУ на запрошення директора Центру франко-української наукової кооперації і підготовки персоналу, професора кафедри програмної інженерії Петрика Михайла Романовича.\r\n\r\n     Варто відзначити, що наш університет веде тривалу ефективну співпрацю з низкою французьких лабораторій, зокрема Лабораторія математичного моделювання масопереносу в неоднорідних і нанопористих середовищах та кафедра програмної інженерії розвивають спільні проекти в галузі ідентифікації параметрів компетитивної дифузії газів в нанопористих середовищах з Вищою Школою Інженерної фізики і хімії Парижу ESPCI Paris Tech, Університетом П'єра та Марії Кюрі Paris 6.";
     
     self.footerView = [[UIView alloc] init];
     
     self.titleLabel = [[UILabel alloc] init];
     self.titleLabel.numberOfLines = 0;
     [self.titleLabel sizeToFit];
-    self.titleLabel.text = title;
+    self.titleLabel.text = self.titleString;
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
     [self.footerView addSubview:self.titleLabel];
     
     
-    self.textView = [[NewsTextView alloc] initWithFrame:CGRectZero content:content];
+    self.textView = [[NewsTextView alloc] initWithFrame:CGRectZero content:self.contentString];
     [self.footerView addSubview:self.textView];
     [self.tableView addSubview:self.footerView];
     
     // Initialasing imageViewsArray
-    imageNames = [NSArray arrayWithObjects:@"placeholder", @"placeholder", @"placeholder", @"placeholder", nil];
     imageViewsArray = [NSMutableArray new];
-    for (NSString *imageName in imageNames) {
-        UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];
+    for (NSString *imageName in self.imagesNameArray) {
+        UIImageView *imageView = [[UIImageView alloc] init];
+        [imageView setImageWithURL:[NSURL URLWithString:imageName] placeholderImage:[UIImage imageNamed:@"placeholder"]];
         [imageViewsArray addObject:imageView];
     }
+    
     [self.textView addImageViews:imageViewsArray];
 }
 

@@ -10,4 +10,8 @@
 
 @interface NewsViewController : UITableViewController
 
+@property (strong,nonatomic) NSString *titleString;
+@property (strong,nonatomic) NSString *contentString;
+@property (strong,nonatomic) NSArray *imagesNameArray;
+
 @end

@@ -34,6 +34,7 @@
     [self setSelectable:NO];
     [self setEditable:NO];
     [self setScrollEnabled:YES];
+    [self setDataDetectorTypes:UIDataDetectorTypeAll];
     [self setTextColor:[UIColor tntuArticleTextColor]];
     
     [self setBackgroundColor:[UIColor tntuArticleBackgroundColor]];
@@ -58,6 +59,9 @@ static CGFloat kImageViewPadding = 15*14;
                                   kImageViewHeight);
         imageView.frame = frame;
         [imageView setupImageViewer];
+        [imageView setClipsToBounds:YES];
+        [imageView setContentMode:UIViewContentModeScaleAspectFill];
+        
         // Adding to exclusion paths
         UIBezierPath* exclusionPath = [UIBezierPath bezierPathWithRect:CGRectMake(imageView.frame.origin.x - 3.0,
                                                                                   imageView.frame.origin.y - 10.0,
@@ -69,33 +73,5 @@ static CGFloat kImageViewPadding = 15*14;
     }
     self.textContainer.exclusionPaths = exclusionPaths;
 }
-//- (void)addImageViews:(NSArray *)imageViewsArray
-//{
-//    static NSInteger currentImageView = 0;
-//    NSMutableArray *exclusionPaths = [NSMutableArray new];
-//    
-//    for (UIImageView *imageView in imageViewsArray) {
-//        
-//        // Layout Image View
-//        CGRect frame = CGRectMake(0.0,
-//                                  self.contentSize.height + 5.0,
-//                                  kImageViewWidth,
-//                                  kImageViewHeight);
-//        imageView.frame = frame;
-//        [imageView setupImageViewer];
-//        
-//        self.contentSize = CGSizeMake(320.0, self.contentSize.height + kImageViewHeight + 10.0);
-//        
-//        // Adding to exclusion paths
-//        UIBezierPath* exclusionPath = [UIBezierPath bezierPathWithRect:CGRectMake(imageView.frame.origin.x - 3.0,
-//                                                                                  imageView.frame.origin.y - 10.0,
-//                                                                                  imageView.frame.size.width + 3.0,
-//                                                                                  imageView.frame.size.height + 10.0)];
-//        [exclusionPaths addObject:exclusionPath];
-//        [self addSubview:imageView];
-//        currentImageView++;
-//    }
-//    self.textContainer.exclusionPaths = exclusionPaths;
-//}
 
 @end

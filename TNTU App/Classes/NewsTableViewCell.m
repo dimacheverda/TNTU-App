@@ -10,4 +10,10 @@
 
 @implementation NewsTableViewCell
 
+- (void)drawRect:(CGRect)rect
+{
+    [self.newsImageView setClipsToBounds:YES];
+    [self.newsImageView setContentMode:UIViewContentModeScaleAspectFill];
+}
+
 @end
