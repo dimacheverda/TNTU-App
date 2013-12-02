@@ -66,6 +66,9 @@
 		32C1EA4517EB3468000ED75A /* ScheduleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C1EA4417EB3468000ED75A /* ScheduleTableViewController.m */; };
 		32C1EA4917EB3A81000ED75A /* ScheduleSingleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C1EA4817EB3A81000ED75A /* ScheduleSingleCell.m */; };
 		32CBAA711829366600C9CB1A /* DismissPhotoTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CBAA701829366600C9CB1A /* DismissPhotoTransition.m */; };
+		32FEBD7A184BA001000F9C0A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FEBD79184BA001000F9C0A /* SystemConfiguration.framework */; };
+		32FEBD7D184BA0FB000F9C0A /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FEBD7C184BA0FB000F9C0A /* Reachability.m */; };
+		32FEBD81184BA7F9000F9C0A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FEBD80184BA7F9000F9C0A /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,6 +182,11 @@
 		32C1EA4817EB3A81000ED75A /* ScheduleSingleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScheduleSingleCell.m; path = Classes/ScheduleSingleCell.m; sourceTree = "<group>"; };
 		32CBAA6F1829366600C9CB1A /* DismissPhotoTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DismissPhotoTransition.h; path = Classes/DismissPhotoTransition.h; sourceTree = "<group>"; };
 		32CBAA701829366600C9CB1A /* DismissPhotoTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DismissPhotoTransition.m; path = Classes/DismissPhotoTransition.m; sourceTree = "<group>"; };
+		32FEBD79184BA001000F9C0A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		32FEBD7B184BA0FB000F9C0A /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		32FEBD7C184BA0FB000F9C0A /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		32FEBD7F184BA7F9000F9C0A /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		32FEBD80184BA7F9000F9C0A /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +194,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32FEBD7A184BA001000F9C0A /* SystemConfiguration.framework in Frameworks */,
 				32810D4917E7503600FF45C8 /* CoreGraphics.framework in Frameworks */,
 				32810D4B17E7503600FF45C8 /* UIKit.framework in Frameworks */,
 				32810D4717E7503600FF45C8 /* Foundation.framework in Frameworks */,
@@ -239,6 +248,7 @@
 		32810D4517E7503600FF45C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				32FEBD79184BA001000F9C0A /* SystemConfiguration.framework */,
 				32810D4617E7503600FF45C8 /* Foundation.framework */,
 				32810D4817E7503600FF45C8 /* CoreGraphics.framework */,
 				32810D4A17E7503600FF45C8 /* UIKit.framework */,
@@ -261,6 +271,8 @@
 				32821A72180B362E00F07112 /* WYPopover */,
 				3290DF8E183827700076B7B4 /* MHFBImageViewController */,
 				32637BC918258D90005ED71E /* Categories */,
+				32FEBD7E184BA0FF000F9C0A /* Reachability */,
+				32FEBD82184BA806000F9C0A /* MBProgressHUD */,
 				32810D5E17E7503600FF45C8 /* Images.xcassets */,
 				3293771C180EEDA000D8172D /* Media.xcassets */,
 				32810D8317E7555E00FF45C8 /* Artwork */,
@@ -447,6 +459,24 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
+		32FEBD7E184BA0FF000F9C0A /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				32FEBD7B184BA0FB000F9C0A /* Reachability.h */,
+				32FEBD7C184BA0FB000F9C0A /* Reachability.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
+		32FEBD82184BA806000F9C0A /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				32FEBD7F184BA7F9000F9C0A /* MBProgressHUD.h */,
+				32FEBD80184BA7F9000F9C0A /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -563,6 +593,7 @@
 				32C1EA4517EB3468000ED75A /* ScheduleTableViewController.m in Sources */,
 				32821A70180B362900F07112 /* WYPopoverController.m in Sources */,
 				3210596218131E2300149324 /* TntuKit.m in Sources */,
+				32FEBD81184BA7F9000F9C0A /* MBProgressHUD.m in Sources */,
 				3281ECD4183BB82B00EA41CA /* NewsTextView.m in Sources */,
 				32810D5317E7503600FF45C8 /* main.m in Sources */,
 				3290DFC7183828910076B7B4 /* AFNetworkActivityIndicatorManager.m in Sources */,
@@ -589,6 +620,7 @@
 				3242795F182706E100E266BB /* PhotoViewController.m in Sources */,
 				328E7BB11821B9AC0001B3CD /* UIFont+TNTUAdditions.m in Sources */,
 				3290DFC8183828910076B7B4 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				32FEBD7D184BA0FB000F9C0A /* Reachability.m in Sources */,
 				32821A71180B362900F07112 /* WYStoryboardPopoverSegue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
