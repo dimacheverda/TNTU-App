@@ -37,8 +37,8 @@
     [self.tableView addSubview:self.refreshControl];
     
     // Init MBProgressHUD
-    self.HUD = [[MBProgressHUD alloc] initWithView:self.tableView];
-    [self.tableView addSubview:self.HUD];
+    self.HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+    [self.navigationController.view addSubview:self.HUD];
     
     // Loading data in background thread and reloading table view data source
     [self refreshControlToggled];
@@ -67,7 +67,7 @@
                 [self.HUD show:YES];
             });
             
-            // Loading array fomr internet
+            // Loading array from internet
             self.tableViewDataArray = [TntuKit loadArrayFromDropboxFile:@"newsbase.plist"];
             
             [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
