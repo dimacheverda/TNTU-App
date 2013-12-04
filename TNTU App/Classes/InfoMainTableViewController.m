@@ -22,6 +22,7 @@
 
 - (void)viewDidLoad
 {
+    [self.navigationItem setTitle:@"Інфо"];
     content = [NSArray arrayWithObjects:@"Персонал", @"Навчання", @"Працевлаштування", @"Програма подвійних дипломів", @"Наукова робота", @"Абітурієнту", @"Контакти", nil];
 }
 

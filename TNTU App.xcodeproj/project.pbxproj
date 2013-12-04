@@ -66,6 +66,9 @@
 		32C1EA4517EB3468000ED75A /* ScheduleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C1EA4417EB3468000ED75A /* ScheduleTableViewController.m */; };
 		32C1EA4917EB3A81000ED75A /* ScheduleSingleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C1EA4817EB3A81000ED75A /* ScheduleSingleCell.m */; };
 		32CBAA711829366600C9CB1A /* DismissPhotoTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CBAA701829366600C9CB1A /* DismissPhotoTransition.m */; };
+		32FBA17D184E032000ECB91B /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FBA17C184E032000ECB91B /* ContactsViewController.m */; };
+		32FBA181184E29E500ECB91B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FBA180184E29E500ECB91B /* MapViewController.m */; };
+		32FBA183184E2AF800ECB91B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FBA182184E2AF800ECB91B /* MapKit.framework */; };
 		32FEBD7A184BA001000F9C0A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FEBD79184BA001000F9C0A /* SystemConfiguration.framework */; };
 		32FEBD7D184BA0FB000F9C0A /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FEBD7C184BA0FB000F9C0A /* Reachability.m */; };
 		32FEBD81184BA7F9000F9C0A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FEBD80184BA7F9000F9C0A /* MBProgressHUD.m */; };
@@ -182,6 +185,11 @@
 		32C1EA4817EB3A81000ED75A /* ScheduleSingleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScheduleSingleCell.m; path = Classes/ScheduleSingleCell.m; sourceTree = "<group>"; };
 		32CBAA6F1829366600C9CB1A /* DismissPhotoTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DismissPhotoTransition.h; path = Classes/DismissPhotoTransition.h; sourceTree = "<group>"; };
 		32CBAA701829366600C9CB1A /* DismissPhotoTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DismissPhotoTransition.m; path = Classes/DismissPhotoTransition.m; sourceTree = "<group>"; };
+		32FBA17B184E032000ECB91B /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactsViewController.h; path = Classes/ContactsViewController.h; sourceTree = "<group>"; };
+		32FBA17C184E032000ECB91B /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactsViewController.m; path = Classes/ContactsViewController.m; sourceTree = "<group>"; };
+		32FBA17F184E29E500ECB91B /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = Classes/MapViewController.h; sourceTree = "<group>"; };
+		32FBA180184E29E500ECB91B /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = Classes/MapViewController.m; sourceTree = "<group>"; };
+		32FBA182184E2AF800ECB91B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		32FEBD79184BA001000F9C0A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		32FEBD7B184BA0FB000F9C0A /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		32FEBD7C184BA0FB000F9C0A /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
@@ -196,6 +204,7 @@
 			files = (
 				32FEBD7A184BA001000F9C0A /* SystemConfiguration.framework in Frameworks */,
 				32810D4917E7503600FF45C8 /* CoreGraphics.framework in Frameworks */,
+				32FBA183184E2AF800ECB91B /* MapKit.framework in Frameworks */,
 				32810D4B17E7503600FF45C8 /* UIKit.framework in Frameworks */,
 				32810D4717E7503600FF45C8 /* Foundation.framework in Frameworks */,
 			);
@@ -248,6 +257,7 @@
 		32810D4517E7503600FF45C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				32FBA182184E2AF800ECB91B /* MapKit.framework */,
 				32FEBD79184BA001000F9C0A /* SystemConfiguration.framework */,
 				32810D4617E7503600FF45C8 /* Foundation.framework */,
 				32810D4817E7503600FF45C8 /* CoreGraphics.framework */,
@@ -268,9 +278,10 @@
 				32810DA017E7A08C00FF45C8 /* Info Tab */,
 				32810DA117E7A09700FF45C8 /* Schedule Tab */,
 				3287735A180D69FD00693E24 /* News Tab */,
+				32FBA17E184E032F00ECB91B /* Contacts Tab */,
+				32637BC918258D90005ED71E /* Categories */,
 				32821A72180B362E00F07112 /* WYPopover */,
 				3290DF8E183827700076B7B4 /* MHFBImageViewController */,
-				32637BC918258D90005ED71E /* Categories */,
 				32FEBD7E184BA0FF000F9C0A /* Reachability */,
 				32FEBD82184BA806000F9C0A /* MBProgressHUD */,
 				32810D5E17E7503600FF45C8 /* Images.xcassets */,
@@ -459,6 +470,17 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
+		32FBA17E184E032F00ECB91B /* Contacts Tab */ = {
+			isa = PBXGroup;
+			children = (
+				32FBA17B184E032000ECB91B /* ContactsViewController.h */,
+				32FBA17C184E032000ECB91B /* ContactsViewController.m */,
+				32FBA17F184E29E500ECB91B /* MapViewController.h */,
+				32FBA180184E29E500ECB91B /* MapViewController.m */,
+			);
+			name = "Contacts Tab";
+			sourceTree = "<group>";
+		};
 		32FEBD7E184BA0FF000F9C0A /* Reachability */ = {
 			isa = PBXGroup;
 			children = (
@@ -525,6 +547,13 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Dima;
 				TargetAttributes = {
+					32810D4217E7503600FF45C8 = {
+						SystemCapabilities = {
+							com.apple.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					32810D6317E7503600FF45C8 = {
 						TestTargetID = 32810D4217E7503600FF45C8;
 					};
@@ -593,6 +622,7 @@
 				32C1EA4517EB3468000ED75A /* ScheduleTableViewController.m in Sources */,
 				32821A70180B362900F07112 /* WYPopoverController.m in Sources */,
 				3210596218131E2300149324 /* TntuKit.m in Sources */,
+				32FBA17D184E032000ECB91B /* ContactsViewController.m in Sources */,
 				32FEBD81184BA7F9000F9C0A /* MBProgressHUD.m in Sources */,
 				3281ECD4183BB82B00EA41CA /* NewsTextView.m in Sources */,
 				32810D5317E7503600FF45C8 /* main.m in Sources */,
@@ -622,6 +652,7 @@
 				3290DFC8183828910076B7B4 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				32FEBD7D184BA0FB000F9C0A /* Reachability.m in Sources */,
 				32821A71180B362900F07112 /* WYStoryboardPopoverSegue.m in Sources */,
+				32FBA181184E29E500ECB91B /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

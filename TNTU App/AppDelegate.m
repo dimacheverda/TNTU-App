@@ -40,12 +40,16 @@
     UITabBarItem *tabBarItem1 = [tabBar.items objectAtIndex:0];
     UITabBarItem *tabBarItem2 = [tabBar.items objectAtIndex:1];
     UITabBarItem *tabBarItem3 = [tabBar.items objectAtIndex:2];
+    UITabBarItem *tabBarItem4 = [tabBar.items objectAtIndex:3];
     tabBarItem1.image = [UIImage imageNamed:@"info_line"];
     tabBarItem1.selectedImage = [UIImage imageNamed:@"info_fill"];
     tabBarItem2.image = [UIImage imageNamed:@"date_line"];
     tabBarItem2.selectedImage = [UIImage imageNamed:@"date_fill"];
     tabBarItem3.image = [UIImage imageNamed:@"recent_line"];
     tabBarItem3.selectedImage = [UIImage imageNamed:@"recent_fill"];
+    tabBarItem4.image = [UIImage imageNamed:@"recent_line"];
+    tabBarItem4.selectedImage = [UIImage imageNamed:@"recent_fill"];
+    
     return YES;
 }
 
